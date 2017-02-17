@@ -7,6 +7,6 @@
     <br>
     <h2>Rushabh Vora</h2>
     <p>An international student from Mumbai, India, majoring in Computer Science. This is an individual site required for the completion of Milestone 0 in CSC 648.</p>
-    <p><a href="/webroot/">Home</a></p>
+    <p><a href="/~sp17g03/">Home</a></p>
   </body>
 </html>
