@@ -6,6 +6,8 @@ In order to install this project on a server, run the following commands:
 
 ```
 git clone [url]
+git checkout devel
+git pull
 cd CSC-648-Team-03-Project/my_app_name
 composer update
 cp config/app.default.php config/app.php
