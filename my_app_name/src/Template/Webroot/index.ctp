@@ -11,7 +11,7 @@
     <ol>
         <li><a href="../pages/about/mark">Mark Reynolds</a></li>
         <li><a href="../pages/about/rush">Rushabh Vora</a></li>
-
+        <li><a href="../pages/about/shayn">Shayn Hoy</a></li>  
     </ol>
   </body>
 </html>
