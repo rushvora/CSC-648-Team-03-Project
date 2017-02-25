@@ -2,10 +2,12 @@
 
 ## 1. Executive Summary
 
-    **NAME** will be a website that allows San Francisco State University (SFSU) students to sell items to other SFSU students. **NAME** is different from anything else on the market because it requires buyers and sellers to register with an SFSU email, and allows users to rate their interactions with each other. Both of these help build user trust for two reasons, the user already knows that the other person they are interacting with is an SFSU student, and the user can read past reviews about interactions other users have had with this person *(Mark: Run-on sentance?)*.
-    Our startup is uniquely qualified to create this site for a variety of reasons. It is made up entirely of SFSU students, meaning we understand the needs that are unique to SFSU students. Also our collective broad experience throughout the industry enables us to be ready for any challenge that comes our way.
+**NAME** will be a website that allows San Francisco State University (SFSU) students to sell items to other SFSU students. **NAME** is different from anything else on the market because it requires buyers and sellers to register with an SFSU email, and allows users to rate their interactions with each other. Both of these help build user trust for two reasons, the user already knows that the other person they are interacting with is an SFSU student, and the user can read past reviews about interactions other users have had with this person *(Mark: Run-on sentance?)*.
+
+Our startup is uniquely qualified to create this site for a variety of reasons. It is made up entirely of SFSU students, meaning we understand the needs that are unique to SFSU students. Also our collective broad experience throughout the industry enables us to be ready for any challenge that comes our way.
 
 *Name: Gator Swamp/Gator Swap/Students Sell Stuff/Yard Sale?*
+
 *Special Feature: Rate Sellers/Buyers*
 
 
@@ -21,7 +23,7 @@ Unregistered seller:
 Wendy is a SFSU student who has heard about the site and has some things that sh wants to sell. When she arrives at the site she finds the link to the page for selling items. Upon requesting to post an object of sale she is directed to the registration page, where she will be asked to provide a valid SFSU email and fill out a captcha. She will then be asked to decide on a user name and password that she will use for her login in information next time she arrives at the site.
 
 Registered seller:
-Anthony is a SFSU student who has been previously registered. Upon arriving to the site he finds the link to login. He will then be directed to the login page where he will be asked to provide his username and email as well as fill out a  CAPTCHA. After successfully competing the login process he will be allowed to post photos of items he wishes to sell.
+Anthony is a SFSU student who has been previously registered. Upon arriving to the site he finds the link to login. He will then be directed to the login page where he will be asked to provide his username and email as well as fill out a  CAPTCHA. After successfully competing the login process he will be allowed to post photos of items he wishes to sell. *(Mark: See note for registered buyer)*
 
 
 ##3. **Data Definitions**
