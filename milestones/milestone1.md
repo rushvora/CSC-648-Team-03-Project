@@ -19,7 +19,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 	Dillon is a sophomore at San Francisco State University and a **registered user** of the site. He has found himself in need of somewhere to sit in his apartment. After **logging into** the site using his **SFSU email** and a password he finds the link to view the different **categories** of items for **sale**. Once on the **categories** page he finds the link to “ furniture” after clicking on  the furniture link he is brought to a page containing photos of all the furniture for sale by other SFSU students. Each uses the usual information provided in the photos to inspect each piece for quality as well as compatibility for his specific seating needs. After finding a chair that meets his needs he contacts the **seller** to arrange a meeting. He is in luck because the person he wants to buy a chair from lives very close to him and is available to meet later that afternoon. After meeting the seller and fulfilling the financial obligations that were arranged between he and the seller, brings his new ( new to him ) chair home and reflects on the ease of the transaction, the low cost of the item, and the politeness and promptness of the **seller**. With all this in mind he returns to the site and with ease he finds the link to rate the **seller** and gives her the highest **rating** available, improving her overall rating and making her day. 
 
 **3- Seller:**
-	Jenny is a senior at San Francisco State University and has used the site many times to buy an apartment full of furniture, a bicycle, and many semesters worth of textbooks all aquired at a reasonable price with the greatest of ease. Jenny like many students, is in need of money for a plethora of living expenses. Jenny being smart decides to use the same amazing site that she used to purchase these items to **sell** them back to another SFSU student that may have need them.After **logging into** the site she finds the link to **sell items**. Now that she has arrived at the page to **sell** items one by one she uploads a photo of the item and gives a brief description of the item as well as any information she finds important about the item for sale, and a fair price. She can hardly contain her excitement as she eagerly awaits to be contacted by another **registered user** and hopefully receive a high rating like she has given to many other sellers. She is in luck within moments she is contacted by another SFSU student who is interested in buying her toaster. Jenny and the buyer arrange a time and place to carry out the transaction as well as any specifics about payment . After selling her toaster Jenny could not be happier with the transaction and rushes immediately back to the site to give the highest **rating** possible to the **buyer**.
+	Jenny is a senior at San Francisco State University and has used the site many times to buy an apartment full of furniture, a bicycle, and many semesters worth of textbooks all squirrels at a reasonable price with the greatest of ease. Jenny like many students, is in need of money for a plethora of living expenses. Jenny being smart decides to use the same amazing site that she used to purchase these items to **sell** them back to another SFSU student that may have need them.After **logging into** the site she finds the link to **sell items**. Now that she has arrived at the page to **sell** items one by one she uploads a photo of the item and gives a brief description of the item as well as any information she finds important about the item for sale, and a fair price. She can hardly contain her excitement as she eagerly awaits to be contacted by another **registered user** and hopefully receive a high rating like she has given to many other sellers. She is in luck within moments she is contacted by another SFSU student who is interested in buying her toaster. Jenny and the buyer arrange a time and place to carry out the transaction as well as any specifics about payment . After selling her toaster Jenny could not be happier with the transaction and rushes immediately back to the site to give the highest **rating** possible to the **buyer**.
 
 **4- Administrator:**
 	Sophia is a junior at San Francisco State University and is the **administrator** of a website that offers a platform for other students at her school to **buy** and **sell** goods. As the **admin** she has some concerns about the not only the functionality of the site but as well to make sure that everyone on the site is using the site is using it for its intended purpose. As the administrator she has the ability to browse through all **registered user** product listings as well as a list of all **registered users**. One afternoon she is looking through the items for sale in the furniture category and notices that some one has posted something illegal  for sale. Although she does not have the ability to edit any listings or **registered user** information she does have the ability to remove the item and ban the user from the site. Sophia does not have the ability to sell items of her own on the site but as we have seen her does have the ability to fight crime. 
@@ -62,23 +62,25 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
 ## 5. List Non-Funtional Specs
 
- 1. Application shall be developed using class provided LAMP stack
- 2. Application shall be developed using pre-approved set of SW development and collaborative tools provided in the class. Any other tools or frameworks must  be be explicitly approved by Anthony Souza on a case by case basis.
- 3. Application shall be hosted and deployed on Amazon Web Services as specified in the class
- 4. Application shall be optimized for standard desktop/laptop browsers, and must render correctly on the two latest versions of all major browsers: Mozilla, Safari, Chrome. 
- 5. Application shall have responsive UI code so it can be adequately rendered on mobile devices but no mobile native app is to be developed
- 6. Data shall be stored in the MySQL database on the class server in the team's account
- 7. Application shall be served from the team's account
- 8. No more than 50 concurrent users shall be accessing the application at any time
- 9. Privacy of users shall be protected and all privacy policies will be appropriately communicated to the users.
- 10. The language used shall be English. 
- 11. Application shall be very easy to use and intuitive. No prior training shall be required to use the website. 
- 12. Google analytics shall be added
- 13. Messaging between users shall be done only by class approved methods to avoid issues of security with e-mail services.
- 14. Pay functionality (how to pay for goods and services) shall not be implemented.
- 15. Site security: basic best  practices shall be applied (as covered in the class)
- 16. Modern SE processes and practices shall be used as specified in the class, including collaborative and continuous SW development
- 17. The website shall prominently display the following text on all pages "SFSU Software Engineering Project, Spring 2017.  For Demonstration Only". (Important so as to not confuse this with a real application).
+| # | Specifications |
+| :-----: | :-------: |
+| 1. | Application shall be developed using class provided LAMP stack. |
+| 2. | Application shall be developed using pre-approved set of SW development and collaborative tools provided in the class. Any other tools or frameworks must  be be explicitly approved by Anthony Souza on a case by case basis. |
+| 3. | Application shall be hosted and deployed on Amazon Web Services as specified in the class. |
+| 4. | Application shall be optimized for standard desktop/laptop browsers, and must render correctly on the two latest versions of all major browsers: Mozilla, Safari, Chrome. |
+| 5. | Application shall have responsive UI code so it can be adequately rendered on mobile devices but no mobile native app is to be developed. |
+| 6. | Data shall be stored in the MySQL database on the class server in the team's account. |
+| 7. | Application shall be served from the team's account. |
+| 8. | No more than 50 concurrent users shall be accessing the application at any time. |
+| 9. | Privacy of users shall be protected and all privacy policies will be appropriately communicated to the users. |
+| 10. | The language used shall be English. |
+| 11. | Application shall be very easy to use and intuitive. No prior training shall be required to use the website. |
+| 12. | Google analytics shall be added. |
+| 13. | Messaging between users shall be done only by class approved methods to avoid issues of security with e-mail services. |
+| 14. | Pay functionality (how to pay for goods and services) shall not be implemented. |
+| 15. | Site security: basic best  practices shall be applied (as covered in the class). |
+| 16. | Modern SE processes and practices shall be used as specified in the class, including collaborative and continuous SW development. |
+| 17. | The website shall prominently display the following text on all pages "SFSU Software Engineering Project, Spring 2017.  For Demonstration Only". (Important so as to not confuse this with a real application). |
 
 ## 6. Competitive Analysis
 
