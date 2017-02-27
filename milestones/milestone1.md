@@ -44,15 +44,15 @@ Anthony is a SFSU student who has been previously registered. Upon arriving to t
 
 ## 4. Competitive Analysis
 
-| Features | Amazon | eBay | Uloop | StudentListings | Facebook Groups | ``` Our Site ``` |
+| Features | Amazon | eBay | Uloop | StudentListings | Facebook Groups | ` Our Site ` |
 | :-------:| :--------: | :------: | :------: | :-------: | :-------: | :-------: |
-| Seller Rating | + | + | - | + | - | ``` + ``` |
-| Buyer Rating | - | + | - | - | - | ``` + ``` |
-| SFSU Verificatiom | - | - | + | - | + | ``` ++ ``` |
-| Direct Communication | + | ++ | + | + | ++ | ``` ++ ``` |
-| After Sales Support | ++ | + | + | - | - | ``` - ``` |
-| Timestamped Pictures | - | - | - | - | - | ``` + ``` |
-| Books Only | - | - | - | + | - | ``` - ``` |
+| Seller Rating | + | + | - | + | - | <b> ` + ` </b> |
+| Buyer Rating | - | + | - | - | - | <b> ` + ` </b> |
+| SFSU Verificatiom | - | - | + | - | + | <b> ` ++ ` </b> |
+| Direct Communication | + | ++ | + | + | ++ | <b> ` ++ ` </b> |
+| After Sales Support | ++ | + | + | - | - | <b> ` - ` </b> |
+| Timestamped Pictures | - | - | - | - | - | <b> ` + ` </b> |
+| Books Only | - | - | - | + | - | <b> ` - ` </b> |
 
 
 
