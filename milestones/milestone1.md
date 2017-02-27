@@ -94,6 +94,26 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 | Timestamped Pictures | - | - | - | - | - | <b> ` + ` </b> |
 | Books Only | - | - | - | + | - | <b> ` - ` </b> |
 
+## 7. High Level Architecture
+
+
+1. CakePHP: We will be using CakePHP, which is the most pleasant framework with 
+respect to MVC pattern. Also, the great principle of convention over configuration (COC) is by far the separator from other PHP frameworks. The great thing about COC is if you create a file called “login” in a model folder, you will have a corresponding table in the database called “login”. Cake PHP was built from the ground up. This makes it unique and enjoyable to work with. CakePHP is handy because it has a CRUD (create, read, update, and delete) for database implementation; making development much more efficient. 
+2. MySQL: Is the relational database management system which, will work well with CakePHP. We will be able to have a database table populated whenever we create a file in model. MySQL server will be connected with our database. So each individual will be able to contribute their assigned task and use the team’s database to accept user input or static files.
+3. Foundation (HTML, CSS): This is the best front end framework. This provides a responsive grid, HTML, and CSS UI components. We will be implementing templates, forms, buttons, navigation and other interface components. We plan to create a navbar that is displayed on page 1. When the user decides to scroll down he/she will notice the navbar becomes tucked in. 
+4. IDE (Webstorm PhpStorm and vim and test remotely): We plan to use PhpStorm because it provides seamless integration with PHPCake. 
+5. PHPStorm is a full featured IDE for PHP and it is developed and marketed by Jet Brains. We plan to use the student account which is free, and we get the same features as a regular account. The best feature about PHPStorm is the live editing. For example, say I want to edit a code that I already compiled and want to adjust placement of some content on the website. I can rewrite the code on my IDE and check out my browser. Simply press refresh and I will be able to see the difference
+Integration with version control systems, databases/SQL, composer, remote deployment, vagrant, rest client, and command line tools are just a few developer tools that my team will be using. Xdebug is a debugging tools that will be implemented and it can be used both locally and remotely.
+6. Apache: Is the open source web server my team plans to use. It is part of LAMP stack 
+discuses briefly during lecture. It will enable us to serve contents of our project. 
+7. Web grind: Is an Xdebug profiling web frontend in PHP 7. It implements a 
+subset of the features of kcachegrind. This simple tool will help track time spent in functions. The process of doing this will be by self-cost or inclusive cost. Inclusive cost is time inside function + calls to other functions. This tool will let us keep track of all function time cost. Which is very important for making a feasible UX design model. Our goal is to make the website simple and easy access and navigate content for users. Just to simply our usage of Xdebug is to receive stack and function traces in error messages with the following messages: 1) Full parameter display for user defined functions 2) function name, file name and line indications and finally 3) support for member functions. Also, memory allocation and protection for infinite recursions.
+8. reCaptcha: We plan to use this google based tools to exclude robots from accessing our website. The captcha can be solved by clicking on a box/button, making solving the captcha easier than reading blurred and smeared text from other captcha services. 
+
+
+
+
+
 
 
 ## 8. Team
