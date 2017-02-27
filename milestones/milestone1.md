@@ -83,8 +83,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 | SFSU Verificatiom | - | - | + | - | + | <b> ` ++ ` </b> |
 | Direct Communication | + | ++ | + | + | ++ | <b> ` ++ ` </b> |
 | After Sales Support | ++ | + | + | - | - | <b> ` - ` </b> |
-| Timestamped Pictures | - | - | - | - | - | <b> ` + ` </b> |
-| Books Only | - | - | - | + | - | <b> ` - ` </b> |
+| Product Discussion | + | - | - | - | + | <b> ` + ` </b> |
 
 ## 7. High Level Architecture
 
