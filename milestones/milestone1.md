@@ -42,7 +42,47 @@ Anthony is a SFSU student who has been previously registered. Upon arriving to t
 
   7. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
 
-## 4. Competitive Analysis
+## 4. Initial List of Funtional Specs
+| Priority | Specifications |
+| :------: | :------------: |
+| 1 | All Users shall be able to browse site and products posted |
+| 1 | All Users shall have categories to filter a user’s search |
+| 1 | Unregistered Users shall be able to create an account |
+| 1 | Registered Users shall be able to post products for sale |
+| 1 | Registered Users shall be able to contact seller through sites about payment |
+| 2 | Registered Users shall be able to upload photos of products they are attempting to sell |
+| 2 | Registered Users shall be able to post Buyer/Seller Reviews |
+| 2 | Registered Users shall be able to make a list of products they are interested in buying |
+| 2 | Users shall be able to use search bar (for products, registered users, categories) |
+| 3 | All Users shall be able to see trending products on homepage |
+| 3 | All Users shall be able to see recently posted products on homepage |
+| 3 | All Users shall be able to see recently sold products on homepage (but not who bought them) |
+| 3 | Registered Users shall be able to see products tailored to their interests on homepage |
+| 3 | All Users shall be able to see other products selling/sold by a certain seller |
+| 3 | Registered users shall be able to use a public chat to talk about products they are willing to buy |
+| 3 | All User shall be able to see whether an product is selling, pending, or is sold |
+
+## 5. List Non-Funtional Specs
+
+ 1. Application shall be developed using class provided LAMP stack
+ 2. Application shall be developed using pre-approved set of SW development and collaborative tools provided in the class. Any other tools or frameworks must  be be explicitly approved by Anthony Souza on a case by case basis.
+ 3. Application shall be hosted and deployed on Amazon Web Services as specified in the class
+ 4. Application shall be optimized for standard desktop/laptop browsers, and must render correctly on the two latest versions of all major browsers: Mozilla, Safari, Chrome. 
+ 5. Application shall have responsive UI code so it can be adequately rendered on mobile devices but no mobile native app is to be developed
+ 6. Data shall be stored in the MySQL database on the class server in the team's account
+ 7. Application shall be served from the team's account
+ 8. No more than 50 concurrent users shall be accessing the application at any time
+ 9. Privacy of users shall be protected and all privacy policies will be appropriately communicated to the users.
+ 10. The language used shall be English. 
+ 11. Application shall be very easy to use and intuitive. No prior training shall be required to use the website. 
+ 12. Google analytics shall be added
+ 13. Messaging between users shall be done only by class approved methods to avoid issues of security with e-mail services.
+ 14. Pay functionality (how to pay for goods and services) shall not be implemented.
+ 15. Site security: basic best  practices shall be applied (as covered in the class)
+ 16. Modern SE processes and practices shall be used as specified in the class, including collaborative and continuous SW development
+ 17. The website shall prominently display the following text on all pages "SFSU Software Engineering Project, Spring 2017.  For Demonstration Only". (Important so as to not confuse this with a real application).
+
+## 6. Competitive Analysis
 
 | Features | Amazon | eBay | Uloop | StudentListings | Facebook Groups | ` Our Site ` |
 | :-------:| :--------: | :------: | :------: | :-------: | :-------: | :-------: |
