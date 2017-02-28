@@ -90,11 +90,10 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 | :-------:| :--------: | :------: | :------: | :-------: | :-------: | :-------: |
 | Seller Rating | + | + | - | + | - | <b> ` + ` </b> |
 | Buyer Rating | - | + | - | - | - | <b> ` + ` </b> |
-| SFSU Verificatiom | - | - | + | - | + | <b> ` ++ ` </b> |
+| SFSU Verification | - | - | + | - | + | <b> ` ++ ` </b> |
 | Direct Communication | + | ++ | + | + | ++ | <b> ` ++ ` </b> |
 | After Sales Support | ++ | + | + | - | - | <b> ` - ` </b> |
-| Timestamped Pictures | - | - | - | - | - | <b> ` + ` </b> |
-| Books Only | - | - | - | + | - | <b> ` - ` </b> |
+| Product Discussion | + | - | - | - | + | <b> ` + ` </b> |
 
 
 
