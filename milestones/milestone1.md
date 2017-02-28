@@ -31,9 +31,9 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
   5. **Admin**- Will be in charge of making sure the site is being used correctly by having the ability to browse through all **registered user product** listings as well as a list of all **registered users**.  From these lists the **admin** will have the ability to remove any **listing** postings as well as **registered users** if the need arises.  The **admin** will not however have the ability to edit any listings or **registered user** information as well as not being able to place any **listing** posts of their own.
 
-  6. **San Francisco State University Email**- An **SFSU email** account is required from a user in order to register or sign in.  It is the only personal information that will be taken from a **registered user** that will be authenticated as it will help prove that the user is associated with SFSU.
+  6. **San Francisco State University Email**- An **SFSU email** account is required from a user in order to register or sign in.  It is the only personal information that will be taken from a **registered user** that will be authenticated as it will be used to prove that the user is associated with SFSU.
 
-  7. **Listing**- The **listings** that will be able to be sold on the site will have to be legal items.  **Listing** price, description, and image will be set by the **seller** but will be able to be removed by the **admin** if the **listing** does not meet the site’s **listing** requirements. 
+  7. **Listing**- The **listings** that will be able to be sold on the site will have to be legal items.  **Listing** price, description, and image will be set by the **seller**.  Along with this the **seller** will also will be presented with category names to choose from which will determine which category the **listing** will be under.  As another optional choice the **seller** will be able to choose a pick up location where once the deal is concluded the **buyer** will be able to pick up the **listing**.  These **listings**  will be monitored and be able to be removed by the **admin** if the **listing** does not meet the site’s **listing** requirements. 
 
   8. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
 
