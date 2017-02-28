@@ -43,14 +43,13 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 ## 4. Initial List of Funtional Specs
 | # | Specifications |
 | :------: | :------------: |
-| 1. | All Users shall be able to browse site and products posted |
+| 1. | All Users shall be able to browse site and listings posted |
 | 2. | All Users shall have categories to filter a user’s search |
 | 3. | Unregistered Users shall be able to create an account |
-| 4. | Registered Users shall be able to post products for sale |
+| 4. | Registered Users shall be able to post listings for sale |
 | 5. | Registered Users shall be able to contact seller through sites about payment |
-| 6. | Registered Users shall be able to upload photos of products they are attempting to sell |
+| 6. | Registered Users shall be able to upload photos of listings they are attempting to sell |
 | 7. | Registered Users shall be able to post Buyer/Seller Reviews |
-| 8. | Registered Users shall be able to make a list of products they are interested in buying |
 
 ## 5. List Non-Funtional Specs
 
