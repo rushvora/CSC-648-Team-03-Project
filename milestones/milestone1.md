@@ -13,16 +13,16 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
 ## 2. Use Cases
 **1-  Unregistered User:**
-	Sara is a freshman as San Francisco State University living in her own for the first time she quickly realizes that she does not have all that she needs to create a comfortable living space for herself. She hears about an amazing site for San Francisco State University students where she can buy all the furnishings and appliances needed to create an amazing and productive home. Upon visiting site she finds a series of categories including but not exclusive to home furnishings and appliances, finally a place where she can buy a toaster and a couch at an affordable price. As an unregistered user she will have the ability only to browse items. She will not be allowed to contact registered users, purchase or **sell** items  until she herself becomes a **registered user**. She will have the opportunity to become a  **registered user** when she tries to post an item for sale or contact a registered in order to make a purchase. Once at the registration page she will be asked to provide a valid SFSU email and fill out a **CAPTCHA**. She will then be asked to decide on a username and **password** that she will use for her **login** in information next time she arrives at the site.
+	Sara is a freshman as San Francisco State University living in her own for the first time she quickly realizes that she does not have all that she needs to create a comfortable living space for herself. She hears about an amazing site for San Francisco State University students where she can buy all the furnishings and appliances needed to create an amazing and productive home. Upon visiting site she finds a series of categories including but not exclusive to home furnishings and appliances, finally a place where she can buy a toaster and a couch at an affordable price. As an unregistered user she will have the ability only to browse items. She will not be allowed to contact registered users, purchase or sell items  until she herself becomes a **registered user**. She will have the opportunity to become a  **registered user** when she tries to post an item for sale or contact a registered in order to make a purchase. Once at the registration page she will be asked to provide a valid SFSU email and fill out a **CAPTCHA**. She will then be asked to decide on a username and password that she will use for her login in information next time she arrives at the site.
 
 **2- Registered User:**
-	Dillon is a sophomore at San Francisco State University and a **registered user** of the site. He has found himself in need of somewhere to sit in his apartment. After **logging into** the site using his **SFSU email** and a password he finds the link to view the different **categories** of items for **sale**. Once on the **categories** page he finds the link to “ furniture” after clicking on  the furniture link he is brought to a page containing photos of all the furniture for sale by other SFSU students. Each uses the usual information provided in the photos to inspect each piece for quality as well as compatibility for his specific seating needs. After finding a chair that meets his needs he contacts the **seller** to arrange a meeting. He is in luck because the person he wants to buy a chair from lives very close to him and is available to meet later that afternoon. After meeting the seller and fulfilling the financial obligations that were arranged between he and the seller, brings his new ( new to him ) chair home and reflects on the ease of the transaction, the low cost of the item, and the politeness and promptness of the **seller**. With all this in mind he returns to the site and with ease he finds the link to rate the **seller** and gives her the highest **rating** available, improving her overall rating and making her day. 
+	Dillon is a sophomore at San Francisco State University and a **registered user** of the site. He has found himself in need of somewhere to sit in his apartment. After logging into the site using his **SFSU email** and a password he finds the link to view the different **categories** of items for sale. Once on the **categories** page he finds the link to “ furniture” after clicking on  the furniture link he is brought to a page containing photos of all the furniture for sale by other SFSU students. He uses the information provided by the **seller** and the visual information form the photos to inspect each piece for quality as well as compatibility for his specific seating needs. After finding a chair that meets his needs he contacts the **seller** to arrange a meeting. He is in luck because the person he wants to buy a chair from lives very close to him and is available to meet later that afternoon. After meeting the seller and fulfilling the financial obligations that were arranged between he and the seller, brings his new ( new to him ) chair home and reflects on the ease of the transaction, the low cost of the item, and the politeness and promptness of the **seller**. With all this in mind he returns to the site and with ease he finds the link to rate the **seller** and gives her the highest **rating** available, improving her overall rating and making her day. 
 
 **3- Seller:**
-	Jenny is a senior at San Francisco State University and has used the site many times to buy an apartment full of furniture, a bicycle, and many semesters worth of textbooks all squirrels at a reasonable price with the greatest of ease. Jenny like many students, is in need of money for a plethora of living expenses. Jenny being smart decides to use the same amazing site that she used to purchase these items to **sell** them back to another SFSU student that may have need them.After **logging into** the site she finds the link to **sell items**. Now that she has arrived at the page to **sell** items one by one she uploads a photo of the item and gives a brief description of the item as well as any information she finds important about the item for sale, and a fair price. She can hardly contain her excitement as she eagerly awaits to be contacted by another **registered user** and hopefully receive a high rating like she has given to many other sellers. She is in luck within moments she is contacted by another SFSU student who is interested in buying her toaster. Jenny and the buyer arrange a time and place to carry out the transaction as well as any specifics about payment . After selling her toaster Jenny could not be happier with the transaction and rushes immediately back to the site to give the highest **rating** possible to the **buyer**.
+	Jenny is a senior at San Francisco State University and has used the site many times to buy an apartment full of furniture, a bicycle, and many semesters worth of textbooks all squirrels at a reasonable price with the greatest of ease. Jenny like many students, is in need of money for a plethora of living expenses. Jenny being smart decides to use the same amazing site that she used to purchase these items to sell them back to another SFSU student that may have need them.After logging into the site she finds the link to sell items. Now that she has arrived at the page to sell items. One by one she uploads a photo of the item and gives a brief description of the item as well as any information she finds important about the item for sale, and a fair price. She can hardly contain her excitement as she eagerly awaits to be contacted by another **registered user** and hopefully receive a high rating like she has given to many other sellers. She is in luck within moments she is contacted by another SFSU student who is interested in buying her toaster. Jenny and the buyer arrange a time and place to carry out the transaction as well as any specifics about payment . After selling her toaster Jenny could not be happier with the transaction and rushes immediately back to the site to give the highest **rating** possible to the **buyer**.
 
 **4- Administrator:**
-	Sophia is a junior at San Francisco State University and is the **administrator** of a website that offers a platform for other students at her school to **buy** and **sell** goods. As the **admin** she has some concerns about the not only the functionality of the site but as well to make sure that everyone on the site is using the site is using it for its intended purpose. As the administrator she has the ability to browse through all **registered user** product listings as well as a list of all **registered users**. One afternoon she is looking through the items for sale in the furniture category and notices that some one has posted something illegal  for sale. Although she does not have the ability to edit any listings or **registered user** information she does have the ability to remove the item and ban the user from the site. Sophia does not have the ability to sell items of her own on the site but as we have seen her does have the ability to fight crime. 
+	Sophia is a junior at San Francisco State University and is the **administrator** of a website that offers a platform for other students at her school to buy and sell goods. As the **admin** she has some concerns about whether or not everyone on the site is using it for its intended purpose. As the administrator she has the ability to browse through all **registered user** product listings as well as a list of all **registered users**. One afternoon she is looking through the items for sale in the furniture category and notices that some one has posted something illegal  for sale. Although she does not have the ability to edit any listings or **registered user** information she does have the ability to remove the item and ban the user from the site. Sophia does not have the ability to sell items of her own on the site but as we have seen her does have the ability to fight crime. 
   
 ##3. **Data Definitions**
 
@@ -41,15 +41,24 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
   7. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
 
 ## 4. Initial List of Funtional Specs
-| # | Specifications |
+| Priority | Specifications |
 | :------: | :------------: |
-| 1. | All Users shall be able to browse site and listings posted |
-| 2. | All Users shall have categories to filter a user’s search |
-| 3. | Unregistered Users shall be able to create an account |
-| 4. | Registered Users shall be able to post listings for sale |
-| 5. | Registered Users shall be able to contact seller through sites about payment |
-| 6. | Registered Users shall be able to upload photos of listings they are attempting to sell |
-| 7. | Registered Users shall be able to post Buyer/Seller Reviews |
+| 1 | All Users shall be able to browse site and products posted |
+| 1 | All Users shall have categories to filter a user’s search |
+| 1 | Unregistered Users shall be able to create an account |
+| 1 | Registered Users shall be able to post products for sale |
+| 1 | Registered Users shall be able to contact seller through sites about payment |
+| 2 | Registered Users shall be able to upload photos of products they are attempting to sell |
+| 2 | Registered Users shall be able to post Buyer/Seller Reviews |
+| 2 | Registered Users shall be able to make a list of products they are interested in buying |
+| 2 | Users shall be able to use search bar (for products, registered users, categories) |
+| 3 | All Users shall be able to see trending products on homepage |
+| 3 | All Users shall be able to see recently posted products on homepage |
+| 3 | All Users shall be able to see recently sold products on homepage (but not who bought them) |
+| 3 | Registered Users shall be able to see products tailored to their interests on homepage |
+| 3 | All Users shall be able to see other products selling/sold by a certain seller |
+| 3 | Registered users shall be able to use a public chat to talk about products they are willing to buy |
+| 3 | All User shall be able to see whether an product is selling, pending, or is sold |
 
 ## 5. List Non-Funtional Specs
 
@@ -79,30 +88,11 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 | :-------:| :--------: | :------: | :------: | :-------: | :-------: | :-------: |
 | Seller Rating | + | + | - | + | - | <b> ` + ` </b> |
 | Buyer Rating | - | + | - | - | - | <b> ` + ` </b> |
-| SFSU Verification | - | - | + | - | + | <b> ` ++ ` </b> |
+| SFSU Verificatiom | - | - | + | - | + | <b> ` ++ ` </b> |
 | Direct Communication | + | ++ | + | + | ++ | <b> ` ++ ` </b> |
 | After Sales Support | ++ | + | + | - | - | <b> ` - ` </b> |
-| Product Discussion | + | - | - | - | + | <b> ` + ` </b> |
-
-## 7. High Level Architecture
-
-
-1. CakePHP: We will be using CakePHP, which is the most pleasant framework with 
-respect to MVC pattern. Also, the great principle of convention over configuration (COC) is by far the separator from other PHP frameworks. The great thing about COC is if you create a file called “login” in a model folder, you will have a corresponding table in the database called “login”. Cake PHP was built from the ground up. This makes it unique and enjoyable to work with. CakePHP is handy because it has a CRUD (create, read, update, and delete) for database implementation; making development much more efficient. 
-2. MySQL: Is the relational database management system which, will work well with CakePHP. We will be able to have a database table populated whenever we create a file in model. MySQL server will be connected with our database. So each individual will be able to contribute their assigned task and use the team’s database to accept user input or static files.
-3. Foundation (HTML, CSS): This is the best front end framework. This provides a responsive grid, HTML, and CSS UI components. We will be implementing templates, forms, buttons, navigation and other interface components. We plan to create a navbar that is displayed on page 1. When the user decides to scroll down he/she will notice the navbar becomes tucked in. 
-4. IDE (Webstorm PhpStorm and vim and test remotely): We plan to use PhpStorm because it provides seamless integration with PHPCake. 
-5. PHPStorm is a full featured IDE for PHP and it is developed and marketed by Jet Brains. We plan to use the student account which is free, and we get the same features as a regular account. The best feature about PHPStorm is the live editing. For example, say I want to edit a code that I already compiled and want to adjust placement of some content on the website. I can rewrite the code on my IDE and check out my browser. Simply press refresh and I will be able to see the difference
-Integration with version control systems, databases/SQL, composer, remote deployment, vagrant, rest client, and command line tools are just a few developer tools that my team will be using. Xdebug is a debugging tools that will be implemented and it can be used both locally and remotely.
-6. Apache: Is the open source web server my team plans to use. It is part of LAMP stack 
-discuses briefly during lecture. It will enable us to serve contents of our project. 
-7. Web grind: Is an Xdebug profiling web frontend in PHP 7. It implements a 
-subset of the features of kcachegrind. This simple tool will help track time spent in functions. The process of doing this will be by self-cost or inclusive cost. Inclusive cost is time inside function + calls to other functions. This tool will let us keep track of all function time cost. Which is very important for making a feasible UX design model. Our goal is to make the website simple and easy access and navigate content for users. Just to simply our usage of Xdebug is to receive stack and function traces in error messages with the following messages: 1) Full parameter display for user defined functions 2) function name, file name and line indications and finally 3) support for member functions. Also, memory allocation and protection for infinite recursions.
-8. reCaptcha: We plan to use this google based tools to exclude robots from accessing our website. The captcha can be solved by clicking on a box/button, making solving the captcha easier than reading blurred and smeared text from other captcha services. 
-
-
-
-
+| Timestamped Pictures | - | - | - | - | - | <b> ` + ` </b> |
+| Books Only | - | - | - | + | - | <b> ` - ` </b> |
 
 
 
