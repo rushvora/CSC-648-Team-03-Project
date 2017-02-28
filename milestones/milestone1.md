@@ -45,7 +45,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
  4. Registered Users shall be able to upload photos of products they are attempting to sell.
  5. Registered Users shall be able to post Buyer/Seller Reviews.
  6. Registered Users shall be able to make a list of products they are interested in buying.
- 7. Registered users shall be able to use a public chat to talk about products they are willing to buy.
+ 7. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
  8. Registered Users shall be able to see products tailored to their interests on homepage.
  9. Registered and Unregistered Users shall be able to browse site and products posted.
  10. Registered and Unregistered Users shall have categories to filter a user’s search.
