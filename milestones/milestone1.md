@@ -8,7 +8,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
 ## 2. Use Cases
 **1-  Unregistered User:**
-	Sara is a freshman as San Francisco State University living in her own for the first time she quickly realizes that she does not have all that she needs to create a comfortable living space for herself. She hears about an amazing site for San Francisco State University students where she can buy all the furnishings and appliances needed to create an amazing and productive home. Upon visiting site she finds a series of categories including but not exclusive to home furnishings and appliances, finally a place where she can buy a toaster and a couch at an affordable price. As an unregistered user she will have the ability only to browse items. She will not be allowed to contact registered users, purchase or sell items  until she herself becomes a **registered user**. She will have the opportunity to become a  **registered user** when she tries to post an item for sale or contact a registered in order to make a purchase. Once at the registration page she will be asked to provide a valid SFSU email and fill out a **CAPTCHA**. She will then be asked to decide on a username and password that she will use for her login in information next time she arrives at the site.
+	Sara is a freshman at San Francisco State University living in her own for the first time she quickly realizes that she does not have all that she needs to create a comfortable living space for herself. She hears about an amazing site for San Francisco State University students where she can buy all the furnishings and appliances needed to create an amazing and productive home. Upon visiting site she finds a series of categories including but not exclusive to home furnishings and appliances, finally a place where she can buy a toaster and a couch at an affordable price. As an unregistered user she will have the ability only to browse items. She will not be allowed to contact registered users, purchase or sell items  until she herself becomes a **registered user**. She will have the opportunity to become a  **registered user** when she tries to post an item for sale or contact a registered in order to make a purchase. Once at the registration page she will be asked to provide a valid SFSU email and fill out a **CAPTCHA**. She will then be asked to decide on a username and password that she will use for her login in information next time she arrives at the site.
 
 **2- Registered User:**
 	Dillon is a sophomore at San Francisco State University and a **registered user** of the site. He has found himself in need of somewhere to sit in his apartment. After logging into the site using his **SFSU email** and a password he finds the link to view the different **categories** of items for sale. Once on the **categories** page he finds the link to “ furniture” after clicking on  the furniture link he is brought to a page containing photos of all the furniture for sale by other SFSU students. He uses the information provided by the **seller** and the visual information form the photos to inspect each piece for quality as well as compatibility for his specific seating needs. After finding a chair that meets his needs he contacts the **seller** to arrange a meeting. He is in luck because the person he wants to buy a chair from lives very close to him and is available to meet later that afternoon. After meeting the seller and fulfilling the financial obligations that were arranged between he and the seller, brings his new ( new to him ) chair home and reflects on the ease of the transaction, the low cost of the item, and the politeness and promptness of the **seller**. With all this in mind he returns to the site and with ease he finds the link to rate the **seller** and gives her the highest **rating** available, improving her overall rating and making her day. 
@@ -38,46 +38,43 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
   8. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
 
 ## 4. Initial List of Funtional Specs
-| # | Specifications |
-| :------: | :------------: |
-| 1. | All Users shall be able to browse site and products posted |
-| 2. | All Users shall have categories to filter a user’s search |
-| 3. | Unregistered Users shall be able to create an account |
-| 4. | Registered Users shall be able to post products for sale |
-| 5. | Registered Users shall be able to contact seller through sites about payment |
-| 6. | Registered Users shall be able to upload photos of products they are attempting to sell |
-| 7. | Registered Users shall be able to post Buyer/Seller Reviews |
-| 8. | Registered Users shall be able to make a list of products they are interested in buying |
-| 9. | Users shall be able to use search bar (for products, registered users, categories) |
-| 10. | All Users shall be able to see trending products on homepage |
-| 11. | All Users shall be able to see recently posted products on homepage |
-| 12. | All Users shall be able to see recently sold products on homepage (but not who bought them) |
-| 13. | Registered Users shall be able to see products tailored to their interests on homepage |
-| 14. | All Users shall be able to see other products selling/sold by a certain seller |
-| 15. | Registered users shall be able to use a public chat to talk about products they are willing to buy |
-| 16. | All User shall be able to see whether an product is selling, pending, or is sold |
+
+ 1. Unregistered Users shall be able to create an account.
+ 2. Registered Users shall be able to post products for sale.
+ 3. Registered Users shall be able to contact seller through sites about payment.
+ 4. Registered Users shall be able to upload photos of products they are attempting to sell.
+ 5. Registered Users shall be able to post Buyer/Seller Reviews.
+ 6. Registered Users shall be able to make a list of products they are interested in buying.
+ 7. Registered users shall be able to use a public chat to talk about products they are willing to buy.
+ 8. Registered Users shall be able to see products tailored to their interests on homepage.
+ 9. Registered and Unregistered Users shall be able to browse site and products posted.
+ 10. Registered and Unregistered Users shall have categories to filter a user’s search.
+ 11. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
+ 12. Registered and Unregistered Users shall be able to see trending products on homepage.
+ 13. Registered and Unregistered Users shall be able to see recently posted products on homepage.
+ 14. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
+ 15. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
+ 16. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
 
 ## 5. List Non-Funtional Specs
 
-| # | Specifications |
-| :-----: | :-------: |
-| 1. | Application shall be developed using class provided LAMP stack. |
-| 2. | Application shall be developed using pre-approved set of SW development and collaborative tools provided in the class. Any other tools or frameworks must  be be explicitly approved by Anthony Souza on a case by case basis. |
-| 3. | Application shall be hosted and deployed on Amazon Web Services as specified in the class. |
-| 4. | Application shall be optimized for standard desktop/laptop browsers, and must render correctly on the two latest versions of all major browsers: Mozilla, Safari, Chrome. |
-| 5. | Application shall have responsive UI code so it can be adequately rendered on mobile devices but no mobile native app is to be developed. |
-| 6. | Data shall be stored in the MySQL database on the class server in the team's account. |
-| 7. | Application shall be served from the team's account. |
-| 8. | No more than 50 concurrent users shall be accessing the application at any time. |
-| 9. | Privacy of users shall be protected and all privacy policies will be appropriately communicated to the users. |
-| 10. | The language used shall be English. |
-| 11. | Application shall be very easy to use and intuitive. No prior training shall be required to use the website. |
-| 12. | Google analytics shall be added. |
-| 13. | Messaging between users shall be done only by class approved methods to avoid issues of security with e-mail services. |
-| 14. | Pay functionality (how to pay for goods and services) shall not be implemented. |
-| 15. | Site security: basic best  practices shall be applied (as covered in the class). |
-| 16. | Modern SE processes and practices shall be used as specified in the class, including collaborative and continuous SW development. |
-| 17. | The website shall prominently display the following text on all pages "SFSU Software Engineering Project, Spring 2017.  For Demonstration Only". (Important so as to not confuse this with a real application). |
+1. Application shall be developed using class provided LAMP stack.
+2. Application shall be developed using pre-approved set of SW development and collaborative tools provided in the class. Any other tools or frameworks must  be be explicitly approved by Anthony Souza on a case by case basis.
+3. Application shall be hosted and deployed on Amazon Web Services as specified in the class.
+4. Application shall be optimized for standard desktop/laptop browsers, and must render correctly on the two latest versions of all major browsers: Mozilla, Safari, Chrome.
+5. Application shall have responsive UI code so it can be adequately rendered on mobile devices but no mobile native app is to be developed.
+6. Data shall be stored in the MySQL database on the class server in the team's account.
+7. Application shall be served from the team's account.
+8. No more than 50 concurrent users shall be accessing the application at any time.
+9. Privacy of users shall be protected and all privacy policies will be appropriately communicated to the users.
+10. The language used shall be English.
+11. Application shall be very easy to use and intuitive. No prior training shall be required to use the website.
+12. Google analytics shall be added.
+13. Messaging between users shall be done only by class approved methods to avoid issues of security with e-mail services.
+14. Pay functionality (how to pay for goods and services) shall not be implemented.
+15. Site security: basic best  practices shall be applied (as covered in the class).
+16. Modern SE processes and practices shall be used as specified in the class, including collaborative and continuous SW development.
+17. The website shall prominently display the following text on all pages "SFSU Software Engineering Project, Spring 2017.  For Demonstration Only". (Important so as to not confuse this with a real application).
 
 ## 6. Competitive Analysis
 
