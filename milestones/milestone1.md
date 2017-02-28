@@ -81,7 +81,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
 ## 6. Competitive Analysis
 
-| Features | Amazon | eBay | Uloop | StudentListings | Facebook Groups | ` Our Site ` |
+| Features | Amazon | eBay | Uloop | StudentListings | Facebook Groups | ` Gator Swap ` |
 | :-------:| :--------: | :------: | :------: | :-------: | :-------: | :-------: |
 | Seller Rating | + | + | - | + | - | <b> ` + ` </b> |
 | Buyer Rating | - | + | - | - | - | <b> ` + ` </b> |
