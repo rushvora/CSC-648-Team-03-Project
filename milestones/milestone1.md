@@ -43,24 +43,24 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
   8. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
 
 ## 4. Initial List of Funtional Specs
-| Priority | Specifications |
+| # | Specifications |
 | :------: | :------------: |
-| 1 | All Users shall be able to browse site and products posted |
-| 1 | All Users shall have categories to filter a user’s search |
-| 1 | Unregistered Users shall be able to create an account |
-| 1 | Registered Users shall be able to post products for sale |
-| 1 | Registered Users shall be able to contact seller through sites about payment |
-| 2 | Registered Users shall be able to upload photos of products they are attempting to sell |
-| 2 | Registered Users shall be able to post Buyer/Seller Reviews |
-| 2 | Registered Users shall be able to make a list of products they are interested in buying |
-| 2 | Users shall be able to use search bar (for products, registered users, categories) |
-| 3 | All Users shall be able to see trending products on homepage |
-| 3 | All Users shall be able to see recently posted products on homepage |
-| 3 | All Users shall be able to see recently sold products on homepage (but not who bought them) |
-| 3 | Registered Users shall be able to see products tailored to their interests on homepage |
-| 3 | All Users shall be able to see other products selling/sold by a certain seller |
-| 3 | Registered users shall be able to use a public chat to talk about products they are willing to buy |
-| 3 | All User shall be able to see whether an product is selling, pending, or is sold |
+| 1. | All Users shall be able to browse site and products posted |
+| 2. | All Users shall have categories to filter a user’s search |
+| 3. | Unregistered Users shall be able to create an account |
+| 4. | Registered Users shall be able to post products for sale |
+| 5. | Registered Users shall be able to contact seller through sites about payment |
+| 6. | Registered Users shall be able to upload photos of products they are attempting to sell |
+| 7. | Registered Users shall be able to post Buyer/Seller Reviews |
+| 8. | Registered Users shall be able to make a list of products they are interested in buying |
+| 9. | Users shall be able to use search bar (for products, registered users, categories) |
+| 10. | All Users shall be able to see trending products on homepage |
+| 11. | All Users shall be able to see recently posted products on homepage |
+| 12. | All Users shall be able to see recently sold products on homepage (but not who bought them) |
+| 13. | Registered Users shall be able to see products tailored to their interests on homepage |
+| 14. | All Users shall be able to see other products selling/sold by a certain seller |
+| 15. | Registered users shall be able to use a public chat to talk about products they are willing to buy |
+| 16. | All User shall be able to see whether an product is selling, pending, or is sold |
 
 ## 5. List Non-Funtional Specs
 
