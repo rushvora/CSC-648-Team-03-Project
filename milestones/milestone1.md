@@ -88,6 +88,8 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 | After Sales Support | ++ | + | + | - | - | <b> ` - ` </b> |
 | Product Discussion | + | - | - | - | + | <b> ` + ` </b> |
 
+Our site is aimed at serving only SFSU users, using email verification. None of our competitors utilize email verification to ensure both the buyer and seller are from SFSU. Facebook Groups is the only competitor that provides an intuitive way for the buyer and seller to communicate directly, and we aim to provide an equally intuitive way. Majority of our competitors, such as Amazon & eBay charge fees to the seller, whereas we will not charge any fees. This helps the seller in two ways: they either get more money, or they can charge a lower price which benefits the buyer. The payment is done in person, which reduces chances of payment fraud, and also means our site will have less steps to complete a transaction. We will help buyers and sellers meet in person by suggesting ideal pick up locations, utilising our experience as SFSU students.
+
 ## 7. High Level Architecture
 
 
