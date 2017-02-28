@@ -44,17 +44,18 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
  3. Registered Users shall be able to contact seller through sites about payment.
  4. Registered Users shall be able to upload photos of products they are attempting to sell.
  5. Registered Users shall be able to post Buyer/Seller Reviews.
- 6. Registered Users shall be able to make a list of products they are interested in buying.
- 7. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
- 8. Registered Users shall be able to see products tailored to their interests on homepage.
- 9. Registered and Unregistered Users shall be able to browse site and products posted.
- 10. Registered and Unregistered Users shall have categories to filter a user’s search.
- 11. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
- 12. Registered and Unregistered Users shall be able to see trending products on homepage.
- 13. Registered and Unregistered Users shall be able to see recently posted products on homepage.
- 14. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
- 15. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
- 16. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
+ 6. Registered Users shall be able to add pick up location between Registered buyer and Registered seller.
+ 7. Registered Users shall be able to make a list of products they are interested in buying.
+ 8. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
+ 9. Registered Users shall be able to see products tailored to their interests on homepage.
+ 10. Registered and Unregistered Users shall be able to browse site and products posted.
+ 11. Registered and Unregistered Users shall have categories to filter a user’s search.
+ 12. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
+ 13. Registered and Unregistered Users shall be able to see trending products on homepage.
+ 14. Registered and Unregistered Users shall be able to see recently posted products on homepage.
+ 15. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
+ 16. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
+ 17. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
 
 ## 5. List Non-Funtional Specs
 
