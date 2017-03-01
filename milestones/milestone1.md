@@ -125,4 +125,4 @@ subset of the features of kcachegrind. This simple tool will help track time spe
   * GitHub master chosen: DONE
   * Team ready and able to use chosen framework: DONE
   * Skills of each team member defined and known to all: DONE
-  * Team lead ensured that team members read the final M1 and agree/understand it before submission: ON TRACK
+  * Team lead ensured that team members read the final M1 and agree/understand it before submission: DONE
