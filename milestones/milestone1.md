@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary
 
-Gator Swap will be a website that allows San Francisco State University (SFSU) students to sell items to other SFSU students. Gator Swap is different from anything else on the market because it requires buyers and sellers to register with an SFSU email, and allows users to rate their interactions with each other. Both of these help build user trust for two reasons, the user already knows that the other person they are interacting with is an SFSU student, and the user can read past reviews about interactions other users have had with this person.
+Gator Swap will be a website that allows San Francisco State University (SFSU) students to sell items to other SFSU students. Gator Swap is different from anything else on the market because it requires buyers and sellers to register with an SFSU email. It also allows users to rate their interactions with each other and view the pick up location of various listings. These help build user trust for a variety of reasons, the user already knows that the other person they are interacting with is an SFSU student, and the user can read past reviews about interactions other users have had with this person. Also knowing where the buyer will have to pick up the item helps they stay away from items being sold too far away from them.
 
 Our startup is uniquely qualified to create this site for a variety of reasons. It is made up entirely of SFSU students, meaning we understand the needs that are unique to SFSU students. Also our collective broad experience throughout the industry enables us to be ready for any challenge that comes our way.
 
