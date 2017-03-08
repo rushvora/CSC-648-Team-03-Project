@@ -51,8 +51,7 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
  6. Registered Users shall be able to make a list of products they are interested in buying.
  7. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
  8. Registered Users shall be able to see products tailored to their interests on homepage.
- 10. Registered and Unregistered Users shall be able to browse site and products posted.
- 
+
 **Registered and Unregisterd Users**
  1. Registered and Unregistered Users shall have categories to filter a user’s search.
  2. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
@@ -61,7 +60,8 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
  5. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
  6. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
  7. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
- 
+ 8. Registered and Unregistered Users shall be able to browse site and products posted.
+  
 **Admin**
  1. Admin shall have ability to browse through a list of all registered users.
  2. Admin shall have ability to browse through all registered user product listings.
