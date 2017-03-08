@@ -39,24 +39,35 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
 
 ## 4. Initial List of Funtional Specs
 
+**Unregistered Users**
  1. Unregistered Users shall be able to create an account.
- 2. Registered Users shall be able to post products for sale.
- 3. Registered Users shall be able to contact seller through sites about payment.
- 4. Registered Users shall be able to upload photos of products they are attempting to sell.
- 5. Registered Users shall be able to post Buyer/Seller Reviews.
- 6. Registered Users shall be able to add pick up location between Registered buyer and Registered seller.
- 7. Registered Users shall be able to make a list of products they are interested in buying.
- 8. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
- 9. Registered Users shall be able to see products tailored to their interests on homepage.
+ 
+**Registered Users**
+ 1. Registered Users shall be able to post products for sale.
+ 2. Registered Users shall be able to contact seller through sites about payment.
+ 3. Registered Users shall be able to upload photos of products they are attempting to sell.
+ 4. Registered Users shall be able to post Buyer/Seller Reviews.
+ 5. Registered Users shall be able to add pick up location between Registered buyer and Registered seller.
+ 6. Registered Users shall be able to make a list of products they are interested in buying.
+ 7. Registered Users shall be able to use a public chat to talk about products they are willing to buy.
+ 8. Registered Users shall be able to see products tailored to their interests on homepage.
  10. Registered and Unregistered Users shall be able to browse site and products posted.
- 11. Registered and Unregistered Users shall have categories to filter a user’s search.
- 12. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
- 13. Registered and Unregistered Users shall be able to see trending products on homepage.
- 14. Registered and Unregistered Users shall be able to see recently posted products on homepage.
- 15. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
- 16. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
- 17. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
-
+ 
+**Registered and Unregisterd Users**
+ 1. Registered and Unregistered Users shall have categories to filter a user’s search.
+ 2. Registered and Unregistered Users shall be able to use search bar (for products, registered users, categories).
+ 3. Registered and Unregistered Users shall be able to see trending products on homepage.
+ 4. Registered and Unregistered Users shall be able to see recently posted products on homepage.
+ 5. Registered and Unregistered Users shall be able to see recently sold products on homepage (but not who bought them).
+ 6. Registered and Unregistered Users shall be able to see other products selling/sold by a certain seller.
+ 7. Registered and Unregistered Users shall be able to see whether an product is selling, pending, or is sold.
+ 
+**Admin**
+ 1. Admin shall have ability to browse through a list of all registered users.
+ 2. Admin shall have ability to browse through all registered user product listings.
+ 3. Admin shall have the ability to remove illegal listing.
+ 4. Admin shall have teh ability to ban registered users.
+ 
 ## 5. List Non-Funtional Specs
 
 1. Application shall be developed using class provided LAMP stack.
