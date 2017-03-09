@@ -36,6 +36,8 @@ Our startup is uniquely qualified to create this site for a variety of reasons. 
   7. **Listing**- The **listings** that will be able to be sold on the site will have to be legal items.  **Listing** price, description, and image will be set by the **seller**.  Along with this the **seller** will also will be presented with category names to choose from which will determine which category the **listing** will be under.  As another optional choice the **seller** will be able to choose a pick up location where once the deal is concluded the **buyer** will be able to pick up the **listing**.  These **listings**  will be monitored and be able to be removed by the **admin** if the **listing** does not meet the site’s **listing** requirements. 
 
   8. **CAPTCHA**- A program that will be used to authenticate whether or not the user signing in or registering is not a bot.
+  
+  9. **Ranking**- Each **registered user** will have a rating associated with their account that is based on a one to five star rating system.  With a one being the lowest rating and a five being the highest.  All **registered users** will be given a five star rating to begin with and with each transaction they perform both **registered users** in the transaction will rate the other once the deal has been completed by their satisfaction level with the deal.  This will allow the users to get a better sense of whom they are conducting business with.
 
 ## 4. Initial List of Funtional Specs
 
