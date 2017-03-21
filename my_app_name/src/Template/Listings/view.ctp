@@ -2,7 +2,11 @@
 <html>
 <body>
   <?= $listingName ?>
-  <img src= <?= $listingImage ?>>
+  <br>
+  Price: $<?= $listingPrice ?>
+  <br>
+  <?= $listingImage ?>
+  <br>
   <?= $listingDescription ?>
 </body>
 </html>
