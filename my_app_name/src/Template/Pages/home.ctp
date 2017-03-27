@@ -9,7 +9,7 @@
     <h2 style="text-align: center;">Spring 2017</h2>
     <h3 style="text-align: center;">Section 1 - Team 03</h3>
     <br>
-    <form>
+    <form action="search">
       <div class="row">
         <div class="small-11 columns"> <input type="text" style="width: 100%;"> </div>
         <div class="small-1 columns"> <input class="tiny button" type="submit" value="Search" style="margin-top: -3%; margin-left: -25%; font-size: 100%;"> </div>
@@ -23,3 +23,4 @@
     <a style="margin-left:50%;" href=<?= Router::url(['controller' => 'Pages', 'action' => 'display', 'about']); ?>>About</a>
   </body>
 </html>
+

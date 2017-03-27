@@ -57,7 +57,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     // Connect listings
-    $routes->connect('/listings/*', ['controller' => 'Listings', 'action' => 'view']);
+    $routes->connect('/listings/:id', ['controller' => 'Listings', 'action' => 'view'], ['id' => '\d+', 'pass' => ['id']]);
     $routes->connect('/search/*', ['controller' => 'Listings', 'action' => 'search']);
 
     /**
