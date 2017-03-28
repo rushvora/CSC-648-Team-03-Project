@@ -20,11 +20,11 @@ class ListingsController extends AppController
    */
   public function view($id)
   {
-    $query = $this->Listings->find()->select(['listingsId','Name','Image','Price'])->where(['listingsId' => $id]);
-
+    $query = $this->Listings->find();
+    $query->where(['ListingsId' => $id]);
 
     foreach ($query as $listing) {
-      $this->set('listingName', $listing->Name);
+      $this->set('listingName', $listing->Title);
       $this->set('listingPrice', $listing->Price);
       //$this->set('listingDescription',$listing->description);
       $this->set('listingDescription','Test Description');
@@ -42,15 +42,15 @@ class ListingsController extends AppController
    *
    * @post Set an array for results. Each result should be an array containing strings for listingName, listingShortDescription, listingImage, listingPrice, and listingID.
    */
-  public function search($query)
+  public function search()
   {
-    $queryResults = $this->Listings->find();
-    $queryResults->select(['listingsId', 'Name', 'Image', 'Price']);
-    $queryResults->where(['Name LIKE' => "%$query%"]);
+    $query = htmlspecialchars(stripslashes($_GET['query']));
+
+    $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"]);  // Query methods can also be chained!
     
     $results = array();
     foreach ($queryResults as $result) {
-      $results[] = ['listingName' => $result->Name, 'listingShortDescription' => '', 'listingImage' => $result->Image, 'listingPrice' => $result->Price, 'listingID' => $result->listingsId];
+      $results[] = ['listingName' => $result->Title, 'listingShortDescription' => '', 'listingImage' => $result->Picture, 'listingPrice' => $result->Price, 'listingID' => $result->ListingsId];
     }
     $this->set('results',$results);
     $this->render();
