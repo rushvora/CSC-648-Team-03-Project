@@ -28,7 +28,7 @@ class ListingsController extends AppController
       $this->set('listingPrice', $listing->Price);
       //$this->set('listingDescription',$listing->description);
       $this->set('listingDescription','Test Description');
-      $this->set('listingImage','No Image');
+      $this->set('listingImage',$Listing->Picture);
       break;
     }
     $this->render();
