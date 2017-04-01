@@ -5,8 +5,7 @@
   <br>
   Price: $<?= $listingPrice ?>
   <br>
-  <?= $listingImage ?>
+  <img src="<?= $listingImage ?>" style="width:320px;height:auto;">
   <br>
-  <?= $listingDescription ?>
 </body>
 </html>

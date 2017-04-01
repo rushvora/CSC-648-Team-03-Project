@@ -28,7 +28,7 @@ class ListingsController extends AppController
       $this->set('listingPrice', $listing->Price);
       //$this->set('listingDescription',$listing->description);
       $this->set('listingDescription','Test Description');
-      $this->set('listingImage',$Listing->Picture);
+      $this->set('listingImage',$listing->Picture);
       break;
     }
     $this->render();
@@ -50,7 +50,7 @@ class ListingsController extends AppController
     
     $results = array();
     foreach ($queryResults as $result) {
-      $results[] = ['listingName' => $result->Title, 'listingShortDescription' => '', 'listingImage' => $result->Picture, 'listingPrice' => $result->Price, 'listingID' => $result->ListingsId];
+      $results[] = ['listingName' => $result->Title, 'listingShortDescription' => '', 'listingImage' => $result->Thumbnails, 'listingPrice' => $result->Price, 'listingID' => $result->ListingsId];
     }
     $this->set('results',$results);
     $this->render();
