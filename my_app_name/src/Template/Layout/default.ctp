@@ -37,19 +37,25 @@ $cakeDescription = 'CSC 648 Team 03 Site';
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
-            <div class="col-md-3 navbar-header">
-                Gator Swap
+            <div class="col-md-2 navbar-header">
+                <a class="navbar-brand" href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'home']) ?>">Gator Swap</a>
             </div>
-            <div class="col-md-9" id="navbar">
-                <div class=""> 
+            <div class="col-md-7" id="navbar">
+                <div style="padding-top: 1.25%;"> 
                     <form action="search" class="form-inline">
                         <div class="">
                             <div class="form-group">
                                 <select name="Category" style="">
                                     <option>All Categories</option>
+                                    <option>Books</option>
+                                    <option>Clothes</option>
+                                    <option>Electronics</option>
+                                    <option>Furniture</option>
+                                    <option>School Supplies</option>
+                                    <option>Miscellaneous</option>
                                 </select>
                             </div>
-                            <div class="input-group" style="width: 65%">
+                            <div class="input-group" style="width: 75%">
                                 <input type="text" class="form-control" name="query" required>
                                 <div class="input-group-btn">
                                     <input class="btn btn-default" type="submit" value="Search">
@@ -59,8 +65,19 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                     </form>
                 </div>
             </div>
+            <div class="col-md-3" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Sell</a></li>
+                    <li><a href="#">Dashbord</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+    <!--<div class="alert alert-info" role="alert" style="text-align: center;">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        This website is a class project for CSC 648 at San Francisco State University. It is not a real website. We take no responsibility for any information entered into this site.
+    </div>-->
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

@@ -1,26 +1,56 @@
-<DOCTYPE html>
-<html>
-  <head>
-    <title>CSC 648 Group 03</title>
-    <?php use Cake\Routing\Router; ?>
-  </head>
-  <body>
-    <h1 style="text-align: center;">Software Engineering Class SFSU</h1>
-    <h2 style="text-align: center;">Spring 2017</h2>
-    <h3 style="text-align: center;">Section 1 - Team 03</h3>
-    <br>
-    <form action="search">
-      <div class="row">
-        <div class="small-11 columns"> <input type="text" name="query" style="width: 100%;" required> </div>
-        <div class="small-1 columns"> <input class="tiny button" type="submit" value="Search" style="margin-top: -3%; margin-left: -25%; font-size: 100%;"> </div>
-      </div>
-    </form>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h1 style="text-align: center;">Welcome to Gator Swap!</h1>
+        <p style="text-align: center;">
+            Gator Swap is a website where San Francsico State University students can buy and sell things to each other.
+        </p>
+    </div>
+</div>
+<br>
+<h2 style="text-align: center;">Search by Categories</h2>
+<div class="container" style="text-align: center; padding-top: 2%;">
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                Furniture
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                Electronics
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                Books
+            </button>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 2%;">
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                Clothes
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                School Supplies
+            </button>
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-default btn-lg" style="width: 175px; height: 155px;">
+                Miscellaneous
+            </button>
+        </div>
+    </div>
+</div>
+<br>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <a style="margin-left:50%;" href=<?= Router::url(['controller' => 'Pages', 'action' => 'display', 'about']); ?>>About</a>
-  </body>
-</html>
+<br>
+<br>
+<br>
+<br>
+<div style="margin-left:50%;">
+    <?= $this->Html->link('About',['controller' => 'Pages', 'action' => 'display', 'about']); ?>
+</div>
 
