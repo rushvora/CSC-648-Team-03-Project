@@ -26,25 +26,39 @@ $cakeDescription = 'CSC 648 Team 03 Site';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!--<?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>-->
+    <?= $this->Html->css('bootstrap.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="col-md-3 navbar-header">
+                Gator Swap
+            </div>
+            <div class="col-md-9" id="navbar">
+                <div class=""> 
+                    <form action="search" class="form-inline">
+                        <div class="">
+                            <div class="form-group">
+                                <select name="Category" style="">
+                                    <option>All Categories</option>
+                                </select>
+                            </div>
+                            <div class="input-group" style="width: 65%">
+                                <input type="text" class="form-control" name="query" required>
+                                <div class="input-group-btn">
+                                    <input class="btn btn-default" type="submit" value="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </nav>
     <?= $this->Flash->render() ?>
@@ -53,5 +67,7 @@ $cakeDescription = 'CSC 648 Team 03 Site';
     </div>
     <footer>
     </footer>
+    <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') ?>
+    <?= $this->Html->script('bootstrap.min.js') ?>
 </body>
 </html>
