@@ -23,11 +23,10 @@ class ListingsController extends AppController
         $query->where(['ListingsId' => $id]);
 
         foreach ($query as $listing){
-          $this->set('listingName', $listing->Title);
-          $this->set('listingPrice', $listing->Price);
-          //$this->set('listingDescription',$listing->description);
-          $this->set('listingDescription','Test Description');
-          $this->set('listingImage',$listing->Picture);
+          $this->set('listingName', $listing->TITLE);
+          $this->set('listingPrice', $listing->PRICE);
+          $this->set('listingDescription',$listing->DESCRIPTION);
+          $this->set('listingImage',$listing->PICTURE);
           break;
         }
         $this->render();
@@ -49,7 +48,7 @@ class ListingsController extends AppController
     
         $results = array();
         foreach ($queryResults as $result){
-          $results[] = ['listingName' => $result->Title, 'listingShortDescription' => '', 'listingImage' => $result->Thumbnails, 'listingPrice' => $result->Price, 'listingID' => $result->ListingsId];
+          $results[] = ['listingName' => $result->TITLE, 'listingShortDescription' => '', 'listingImage' => $result->THUMBNAILS, 'listingPrice' => $result->PRICE, 'listingID' => $result->LISTINGSID];
         }
         $this->set('results',$results);
         $this->render();
