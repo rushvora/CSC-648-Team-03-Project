@@ -42,7 +42,7 @@ $cakeDescription = 'CSC 648 Team 03 Site';
             </div>
             <div class="col-md-7" id="navbar">
                 <div style="padding-top: 1.25%;"> 
-                    <form action="search" class="form-inline">
+                    <form action=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search']) ?> class="form-inline">
                         <div class="">
                             <div class="form-group">
                                 <select name="Category" style="">
