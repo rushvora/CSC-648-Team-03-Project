@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
   <?php use Cake\Routing\Router; ?>
@@ -11,3 +11,4 @@
   </ul>
 </body>
 </html>
+
