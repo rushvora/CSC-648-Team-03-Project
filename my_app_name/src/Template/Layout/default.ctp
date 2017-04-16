@@ -43,9 +43,9 @@ $cakeDescription = 'CSC 648 Team 03 Site';
             <div class="col-md-7" id="navbar">
                 <div style="padding-top: 1.25%;"> 
                     <form action=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search']) ?> class="form-inline">
-                        <div class="">
-                            <div class="form-group">
-                                <select name="Category" style="">
+                        
+                            <div class="form-group" style="float: left;">
+                                <select name="category" style="height: 33px;">
                                     <option>All Categories</option>
                                     <option>Books</option>
                                     <option>Clothes</option>
@@ -55,20 +55,24 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                                     <option>Miscellaneous</option>
                                 </select>
                             </div>
-                            <div class="input-group" style="width: 75%">
-                                <input type="text" class="form-control" name="query" required>
+                            <div class="input-group" style="float: left; width: 75%;">
+                                <input type="text" class="form-control" name="query" value="<?php 
+                                if(array_key_exists('query',$_GET))
+                                {
+                                    echo htmlspecialchars(stripslashes($_GET['query']));
+                                } ?>" required>
                                 <div class="input-group-btn">
                                     <input class="btn btn-default" type="submit" value="Search">
                                 </div>
                             </div>
-                        </div>
+                        
                     </form>
                 </div>
             </div>
             <div class="col-md-3" id="navbar">
                 <ul class="nav navbar-nav">
                     <li><a href="#">Sell</a></li>
-                    <li><a href="#">Dashbord</a></li>
+                    <li><a href="#">Dashboard</a></li>
                     <li><a href="#">Login</a></li>
                 </ul>
             </div>
