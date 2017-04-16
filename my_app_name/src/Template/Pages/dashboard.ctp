@@ -1,4 +1,5 @@
 <DOCTYPE html>
+<head>
 <style>
 body {font-family: "Lato", sans-serif;}
 
@@ -79,71 +80,27 @@ div.panel {
 </head>
 <body>
 
+<h1>My Dashboard</h1>
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Buying')">Buying</button>
-  <button class="tablinks" onclick="openTab(event, 'Selling')">Selling</button>
+  <!-- <button class="tablinks" onclick="openTab(event, 'Buying')">Buying</button> -->
+  <button class="tablinks" onclick="openTab(event, 'Selling')">My Listings</button>
 </div>
-
-<div id="Buying" class="tabcontent">
-
-<h2>Buying Section</h2>
-<p>This Tab will contains all listings the user is interested in buying.</p>
-<button class="accordion">Listing 1</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion">Listing  2</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<button class="accordion">Listing 3</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  }
-}
-</script>
-
-
-</div>
-
-
-
-
-
-
 
 <div id="Selling" class="tabcontent">
 
-<h2>Selling Section</h2>
-<p>This Tab will contains all listings the user is interested in selling.</p>
-<button class="accordion">Listing  1</button>
+<h2>My Listings</h2>
+<p>This section contains all listings that the user posted</p>
+<button class="accordion">My Listing 1</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<button class="accordion">Listing 2</button>
+<button class="accordion">My Listing 2</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
 
-<button class="accordion">Listing 3</button>
+<button class="accordion">My Listing 3</button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
@@ -184,3 +141,4 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 </script>
+</body>
