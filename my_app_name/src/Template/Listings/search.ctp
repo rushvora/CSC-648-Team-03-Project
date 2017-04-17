@@ -22,6 +22,19 @@ article {
 <h3>$ <?= $result ['listingPrice'] ?></h3>
 <p><?= $result['listingShortDescription'] ?></p>
 </article>
+
+		
 <button onclick="myFunction()">Contact Seller</button>
+<p id="demo"></p>
+
 </div>
 <?php endforeach; ?>
+<script>
+		function myFunction() {
+    var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
+    if (person != null) {
+        document.getElementById("demo").innerHTML =
+       "Your Message: " + person;
+    }
+		}
+		</script>
