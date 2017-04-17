@@ -135,7 +135,7 @@ div.panel {
 </div>
 <h5><b>Price: $649.99</b></h5>
   <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
-  <a href = "../listings/1">link to posting</a></br>
+  <a href ="#">link to posting</a></br>
   <a href = "#">edit</a></br>
   <a href = "#">delete</a></br>
 </div>
@@ -147,7 +147,7 @@ div.panel {
 </div>
 <h5><b>Price: $200.00</b></h5>
   <p>Placeholder placeholder</p>
-  <a href = "../listings/6">link to post</a></br>
+  <a href = "#">link to post</a></br>
   <a href = "#">edit</a></br>
   <a href = "#">delete</a></br>
 </div>
@@ -159,7 +159,7 @@ div.panel {
 </div>
 <h5><b>Price: $12.99</b></h5>
   <p>Placeholder placeholder</p>
-  <a href = "../listings/11">link to post</a></br>
+  <a href = "#">link to post</a></br>
   <a href ="#">edit</a></br>
   <a href ="#">delete</a></br>
 </div>

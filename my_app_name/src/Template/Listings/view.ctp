@@ -4,6 +4,11 @@
 .modal.and.carousel {
   position: absolute; // Needed because the carousel overrides the position property
 }
+
+      #map {
+        height: 350px;
+        width: 100%;
+       }
 </style>
 
 <!--div is for left side of website, contains pictures of listins and contact seller-->
@@ -97,8 +102,21 @@
          <p><?=$listingDescription?></p>
 
 	<h3>Pickup Location</h3>
-         <img src="http://www.droid-life.com/wp-content/uploads/2016/09/google-maps.jpg" alt="Mountain" style = "width: 500px; height: 300px;">
-         </article>
-
-
-
+ <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 37.7219, lng: -122.4782};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
+    </script>
+	</article>
