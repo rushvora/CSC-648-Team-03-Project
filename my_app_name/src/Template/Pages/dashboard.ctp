@@ -128,19 +128,40 @@ div.panel {
 
 <h2>My Listings</h2>
 <p>This section contains all listings that the user posted</p>
-<button class="accordion">My Listing 1</button>
+<button class="accordion">iPhone 6</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ <div>
+<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+</div>
+<h5><b>Price: $649.99</b></h5>
+  <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
+  <a href = "http://sfsuse.com/~lowellc/CSC-648-Team-03-Project/my_app_name/listings/1">link to posting</a></br>
+  <a href = "">edit</a></br>
+  <a href = "">delete</a></br>
 </div>
 
-<button class="accordion">My Listing 2</button>
+<button class="accordion">Xbox One</button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ <div>
+<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+</div>
+<h5><b>Price: $200.00</b></h5>
+  <p>Placeholder placeholder</p>
+  <a href = "http://sfsuse.com/~lowellc/CSC-648-Team-03-Project/my_app_name/listings/6">link to post</a></br>
+  <a href = "">edit</a></br>
+  <a href = "">delete</a></br>
 </div>
 
-<button class="accordion">My Listing 3</button>
+<button class="accordion">Old Book </button>
 <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ <div>
+<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+</div>
+<h5><b>Price: $12.99</b></h5>
+  <p>Placeholder placeholder</p>
+  <a href = "http://sfsuse.com/~lowellc/CSC-648-Team-03-Project/my_app_name/listings/11">link to post</a></br>
+  <a href ="">edit</a></br>
+  <a href ="">delete</a></br>
 </div>
 
 <script>
