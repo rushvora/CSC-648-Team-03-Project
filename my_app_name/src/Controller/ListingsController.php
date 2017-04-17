@@ -42,9 +42,31 @@ class ListingsController extends AppController
      */
     public function search()
     {
-        $query = htmlspecialchars(stripslashes($_GET['query']));
+        if (array_key_exists('query',$_GET))
+        {
+            $query = htmlspecialchars(stripslashes($_GET['query']));
+        }
+        else    // This allows a category to be searched without a specific search term. (i.e. lists everything in the category.)
+        {
+            $query = '';
+        }
+        if (array_key_exists('category', $_GET))
+        {
+            $category = htmlspecialchars(stripslashes($_GET['category']));
+        }
+        else
+        {
+            $category = 'All Categories';
+        }
 
-        $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"]);  // Query methods can also be chained!
+        if ($category == 'All Categories')
+        {
+            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"]);  // Query methods can also be chained!
+        }
+        else
+        {
+            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category]);
+        }
     
         $results = array();
         foreach ($queryResults as $result){
