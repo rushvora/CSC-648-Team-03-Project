@@ -1,5 +1,5 @@
 <h1 style="text-align: center; margin-top: 0%;">New Listing</h1>
-<form>
+<form action=<?= $this->Url->build(['controller' => 'pages', 'action' => 'display', 'home']);?> >
     <div class="container">
         <div class="row">
             <div class="col-md-4">
