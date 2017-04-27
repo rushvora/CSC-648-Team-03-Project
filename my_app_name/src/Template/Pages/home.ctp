@@ -7,7 +7,6 @@
     </div>
 </div>
 <br>
-<h2 style="text-align: center;">Search by Categories</h2>
 <div class="container" style="text-align: center; padding-top: 2%;">
     <div class="row">
         <div class="col-md-4">
