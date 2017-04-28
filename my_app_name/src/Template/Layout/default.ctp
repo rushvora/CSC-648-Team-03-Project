@@ -26,32 +26,69 @@ $cakeDescription = 'CSC 648 Team 03 Site';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <!--<?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('cake.css') ?>-->
+    <?= $this->Html->css('bootstrap.min.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></li>
-            </ul>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="col-md-2 navbar-header">
+                <a class="navbar-brand" href="<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'home']) ?>">Gator Swap</a>
+            </div>
+            <div class="col-md-7" id="navbar">
+                <div style="padding-top: 1.25%;"> 
+                    <form action=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search']) ?> class="form-inline">
+                        
+                            <div class="form-group" style="float: left;">
+                                <select name="category" style="height: 33px;">
+                                    <option>All Categories</option>
+                                    <option>Books</option>
+                                    <option>Clothes</option>
+                                    <option>Electronics</option>
+                                    <option>Furniture</option>
+                                    <option>School Supplies</option>
+                                    <option>Miscellaneous</option>
+                                </select>
+                            </div>
+                            <div class="input-group" style="float: left; width: 75%;">
+                                <input type="text" class="form-control" name="query" value="<?php 
+                                if(array_key_exists('query',$_GET))
+                                {
+                                    echo htmlspecialchars(stripslashes($_GET['query']));
+                                } ?>" required>
+                                <div class="input-group-btn">
+                                    <input class="btn btn-default" type="submit" value="Search">
+                                </div>
+                            </div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'new_listing']); ?>>Sell</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?>>Dashboard</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'login_registration']); ?>>Login</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+    <!--<div class="alert alert-info" role="alert" style="text-align: center;">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        This website is a class project for CSC 648 at San Francisco State University. It is not a real website. We take no responsibility for any information entered into this site.
+    </div>-->
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
     <footer>
     </footer>
+    <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js') ?>
+    <?= $this->Html->script('bootstrap.min.js') ?>
 </body>
 </html>
