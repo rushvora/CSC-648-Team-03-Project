@@ -40,35 +40,6 @@ div.tab button.active {
     border-top: none;
 }
 
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-}
-
-button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
-}
-
-button.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-}
-
-button.accordion.active:after {
-    content: "\2212";
-}
-
 div.panel {
     padding: 0 18px;
     background-color: white;
@@ -126,64 +97,64 @@ div.panel {
 
 <div id="Selling" class="tabcontent">
 
-<h2>My Listings</h2>
-<p>This section contains all listings that the user posted</p>
-<button class="accordion">iPhone 6</button>
-<div class="panel">
- <div>
-<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
-</div>
-<h5><b>Price: $649.99</b></h5>
-  <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
-  <a href ="#">link to posting</a></br>
-  <a href = "#">edit</a></br>
-  <a href = "#">delete</a></br>
-</div>
+    <h2>My Listings</h2>
+    <p>This section contains all listings that the user posted</p>
 
-<button class="accordion">Xbox One</button>
-<div class="panel">
- <div>
-<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
-</div>
-<h5><b>Price: $200.00</b></h5>
-  <p>Placeholder placeholder</p>
-  <a href = "#">link to post</a></br>
-  <a href = "#">edit</a></br>
-  <a href = "#">delete</a></br>
-</div>
+    <div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px; overflow:hidden;">
+      <div style="float: left;">
+        <div style="padding: 5px;">
+         <img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+        </div>  
+        <div style="padding 5px;">
+         <h3><b>iPhone</b></h3>
+         <h5><b>Price: $649.99</b></h5>
+         <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
+        </div>
+      </div>
+      <div style="border:1px solid #ccc; float:right; padding: 5px;">
+       <a href ="#">link to posting</a></br>
+       <a href = "#">edit</a></br>
+       <a href = "#">delete</a></br>
+      </div>
+    </div>
+<div style="padding: 5px;"></div>
 
-<button class="accordion">Old Book </button>
-<div class="panel">
- <div>
-<img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
-</div>
-<h5><b>Price: $12.99</b></h5>
-  <p>Placeholder placeholder</p>
-  <a href = "#">link to post</a></br>
-  <a href ="#">edit</a></br>
-  <a href ="#">delete</a></br>
-</div>
+ <div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px; overflow:hidden;">
+      <div style="float: left;">
+        <div style="padding: 5px;">
+         <img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+        </div>
+        <div style="padding 5px;">
+         <h3><b>iPhone</b></h3>
+         <h5><b>Price: $649.99</b></h5>
+         <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
+        </div>
+      </div>
+      <div style="border:1px solid #ccc; float:right; padding: 5px;">
+       <a href ="#">link to posting</a></br>
+       <a href = "#">edit</a></br>
+       <a href = "#">delete</a></br>
+      </div>
+    </div>
+<div style="padding: 5px;"></div>
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].onclick = function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight){
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  }
-}
-</script>
-
-
-</div>
-
+ <div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px; overflow:hidden;">
+      <div style="float: left;">
+        <div style="padding: 5px;">
+         <img src="http://shashgrewal.com/wp-content/uploads/2015/05/default-placeholder.png" alt="HTML5 Icon" style="width:128px;height:128px;float:left;padding: 5px">
+        </div>
+        <div style="padding 5px;">
+         <h3><b>iPhone</b></h3>
+         <h5><b>Price: $649.99</b></h5>
+         <p>Brand new iPhone, unlocked, negotiable on price, message me if you're interested</p>
+        </div>
+      </div>
+      <div style="border:1px solid #ccc; float:right; padding: 5px;">
+       <a href ="#">link to posting</a></br>
+       <a href = "#">edit</a></br>
+       <a href = "#">delete</a></br>
+      </div>
+    </div>
 
 <script>
 function openTab(evt, tabName) {
