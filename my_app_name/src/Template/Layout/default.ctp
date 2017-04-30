@@ -47,12 +47,46 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                             <div class="form-group" style="float: left;">
                                 <select name="category" style="height: 33px;">
                                     <option>All Categories</option>
-                                    <option>Books</option>
-                                    <option>Clothes</option>
-                                    <option>Electronics</option>
-                                    <option>Furniture</option>
-                                    <option>School Supplies</option>
-                                    <option>Miscellaneous</option>
+                                    <?php if (array_key_exists('category', $_GET)): ?>
+                                        <?php $cat = htmlspecialchars(stripslashes($_GET['category']));
+                                        if ($cat == 'Books'): ?>
+                                            <option selected="Selected">Books</option>
+                                        <?php else: ?>
+                                            <option>Books</option>
+                                        <?php endif; ?>
+                                        <?php if ($cat == 'Clothes'): ?>
+                                            <option selected="Selected">Clothes</option>
+                                        <?php else: ?>
+                                            <option>Clothes</option>
+                                        <?php endif; ?>
+                                        <?php if ($cat == 'Electronics'): ?>
+                                            <option selected="selected">Electronics</option>
+                                        <?php else: ?>
+                                            <option>Electronics</option>
+                                        <?php endif; ?>
+                                        <?php if ($cat == 'Furniture'): ?>
+                                            <option selected="selected">Furniture</option>
+                                        <?php else: ?>
+                                            <option>Furniture</option>
+                                        <?php endif; ?>
+                                        <?php if ($cat == 'School Supplies'): ?>
+                                            <option selected="selected">School Supplies</option>
+                                        <?php else: ?>
+                                            <option>School Supplies</option>
+                                        <?php endif; ?>
+                                        <?php if ($cat == 'Miscellaneous'): ?>
+                                            <option selected="selected">Miscellaneous</option>
+                                        <?php else: ?>
+                                            <option>Miscellaneous</option>
+                                        <?php endif; ?>
+                                    <?php else: ?>
+                                        <option>Books</option>
+                                        <option>Clothes</option>
+                                        <option>Electronics</option>
+                                        <option>Furniture</option>
+                                        <option>School Supplies</option>
+                                        <option>Miscellaneous</option>
+                                    <?php endif; ?>
                                 </select>
                             </div>
                             <div class="input-group" style="float: left; width: 75%;">
