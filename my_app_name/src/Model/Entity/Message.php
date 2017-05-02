@@ -11,6 +11,8 @@ use Cake\ORM\Entity;
  * @property int $RECIPIENTID
  * @property string $SUBJECT
  * @property string $BODY
+ * @property \Cake\I18n\Time $DATESENT
+ * @property int $READSTATUS
  */
 class Message extends Entity
 {

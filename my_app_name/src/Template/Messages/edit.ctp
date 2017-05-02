@@ -24,6 +24,8 @@
             echo $this->Form->input('RECIPIENTID');
             echo $this->Form->input('SUBJECT');
             echo $this->Form->input('BODY');
+            echo $this->Form->input('DATESENT', ['empty' => true]);
+            echo $this->Form->input('READSTATUS');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

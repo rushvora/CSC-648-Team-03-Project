@@ -31,6 +31,14 @@
             <th scope="row"><?= __('RECIPIENTID') ?></th>
             <td><?= $this->Number->format($message->RECIPIENTID) ?></td>
         </tr>
+        <tr>
+            <th scope="row"><?= __('READSTATUS') ?></th>
+            <td><?= $this->Number->format($message->READSTATUS) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('DATESENT') ?></th>
+            <td><?= h($message->DATESENT) ?></td>
+        </tr>
     </table>
     <div class="row">
         <h4><?= __('BODY') ?></h4>

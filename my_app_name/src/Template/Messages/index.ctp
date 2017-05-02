@@ -18,6 +18,8 @@
                 <th scope="col"><?= $this->Paginator->sort('SENDERID') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('RECIPIENTID') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('SUBJECT') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('DATESENT') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('READSTATUS') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -28,6 +30,8 @@
                 <td><?= $this->Number->format($message->SENDERID) ?></td>
                 <td><?= $this->Number->format($message->RECIPIENTID) ?></td>
                 <td><?= h($message->SUBJECT) ?></td>
+                <td><?= h($message->DATESENT) ?></td>
+                <td><?= $this->Number->format($message->READSTATUS) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $message->MESSAGEID]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $message->MESSAGEID]) ?>

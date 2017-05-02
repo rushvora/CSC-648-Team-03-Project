@@ -61,6 +61,14 @@ class MessagesTable extends Table
         $validator
             ->allowEmpty('BODY');
 
+        $validator
+            ->dateTime('DATESENT')
+            ->allowEmpty('DATESENT');
+
+        $validator
+            ->integer('READSTATUS')
+            ->allowEmpty('READSTATUS');
+
         return $validator;
     }
 }
