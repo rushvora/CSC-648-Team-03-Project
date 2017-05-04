@@ -4,12 +4,19 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\Event\Event;
 
 /**
  * Controller for listing.
  */
 class ListingsController extends AppController
 {
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['view','search']);
+    }
+
     /**
      * Action for viewing a listing.
      *

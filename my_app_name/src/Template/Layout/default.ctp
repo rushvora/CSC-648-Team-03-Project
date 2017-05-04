@@ -94,7 +94,7 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                                 if(array_key_exists('query',$_GET))
                                 {
                                     echo htmlspecialchars(stripslashes($_GET['query']));
-                                } ?>" required>
+                                } ?>">
                                 <div class="input-group-btn">
                                     <input class="btn btn-default" type="submit" value="Search">
                                 </div>
@@ -112,10 +112,10 @@ $cakeDescription = 'CSC 648 Team 03 Site';
             </div>
         </div>
     </nav>
-    <!--<div class="alert alert-info" role="alert" style="text-align: center;">
+    <div class="alert alert-info" role="alert" style="text-align: center;">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         This website is a class project for CSC 648 at San Francisco State University. It is not a real website. We take no responsibility for any information entered into this site.
-    </div>-->
+    </div>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
