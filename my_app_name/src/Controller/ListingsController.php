@@ -68,11 +68,11 @@ class ListingsController extends AppController
 
         if ($category == 'All Categories')
         {
-            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"]);  // Query methods can also be chained!
+            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"])->orWhere(['Description LIKE' => "%$query%"]);  // Query methods can also be chained! Added search with description
         }
         else
         {
-            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category]);
+            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category])->orWhere(['Description LIKE' => "%$query%", 'Category' => $category]); //Search either title or description
         }
     
         $results = array();
