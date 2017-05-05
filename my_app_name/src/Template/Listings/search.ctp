@@ -1,3 +1,4 @@
+
 <DOC html>
 <style>
 /*div.container {
@@ -10,19 +11,31 @@ article {
   padding: 1em;
   overflow: hidden;
 }
+ 
 </style>
+<?php
+if (count($results) == 0)
+	 {
+        echo "No results were found";
+	 }
+	else
+	{
+	echo  count($results)." Items found ";
+	}
+
+?>
 <?php foreach( $results as $result): ?>
 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'view', $result['listingID']]);?>>
-	<div class="row" style="border: 1px solid #ccc;border-radius: 5px; overflow:hidden;padding: 10px; ">
-	 <div class="col-md-2" style="float:left;padding: 5px;">
+        <div class="row" style="border: 1px solid #ccc;border-radius: 5px; overflow:hidden;padding: 10px; ">
+         <div class="col-md-2" style="float:left;padding: 5px;">
           <img style="height:auto; max-height:160px; width:auto;max-width:160px;" src=<?= $result['listingImage'] ?> >
-	 </div>
+         </div>
          <article>
           <h1><u><?= $result['listingName'] ?></u></h1>
           <h3>$ <?= $result ['listingPrice'] ?></h3>
           <p><?= $result['listingShortDescription'] ?></p>
 </a>
-	 <div class="col-md-2" style="float: right;">	
+         <div class="col-md-2" style="float: right;">
           <button  style = "" onclick="myFunction()">Contact Seller</button>
           <p id="demo"></p>
          </div>
@@ -32,11 +45,17 @@ article {
 <div style="padding: 10px;"></div>
 <?php endforeach; ?>
 <script>
-		function myFunction() {
+                function myFunction() {
     var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
     if (person != null) {
         document.getElementById("demo").innerHTML =
        "Your Message: " + person;
     }
-		}
-		</script>
+                }
+                </script>
+
+
+
+
+
+
