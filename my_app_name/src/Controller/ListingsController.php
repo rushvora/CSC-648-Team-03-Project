@@ -42,8 +42,8 @@ class ListingsController extends AppController
     /**
      * Action for searching for a listing.
      *
-     * @param query The text to search for.
-     * @param category The category to search in. (Not yet implemented.)
+     * @param query The text to search for. Searches both the title and the description to find matching results
+     * @param category The category to search in.	
      *
      * @post Set an array for results. Each result should be an array containing strings for listingName, listingShortDescription, listingImage, listingPrice, and listingID.
      */
