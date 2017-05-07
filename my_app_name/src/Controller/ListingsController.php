@@ -65,19 +65,29 @@ class ListingsController extends AppController
         {
             $category = 'All Categories';
         }
-
-        if ($category == 'All Categories')
-        {
-            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"])->orWhere(['Description LIKE' => "%$query%"]);  // Query methods can also be chained! Added search with description
+        
+        if (strlen($query) > 30) {
+            $this->Flash->error('Please limit searches to 30 characters or less.');
+            $results = [];
         }
-        else
-        {
-            $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category])->orWhere(['Description LIKE' => "%$query%", 'Category' => $category]); //Search either title or description
+        elseif (preg_match('/[^A-z0-9\s\.]/',$query)) {    // Look for any character that is not alphanumeric ('A-z0-9'), whitespace ('\s'), or a period ('/.')
+            $this->Flash->error('Please limit searches to alphanumeric characters (letters and numbers), spaces, and periods.');
+            $results = [];
         }
-    
-        $results = array();
-        foreach ($queryResults as $result){
-          $results[] = ['listingName' => $result->TITLE, 'listingShortDescription' => $result->SHORTDESCRIPTION, 'listingImage' => $result->THUMBNAILS, 'listingPrice' => $result->PRICE, 'listingID' => $result->LISTINGSID];
+        else {
+            if ($category == 'All Categories')
+            {
+                $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%"])->orWhere(['Description LIKE' => "%$query%"]);  // Query methods can also be chained! Added search with description
+            }
+            else
+            {
+                $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category])->orWhere(['Description LIKE' => "%$query%", 'Category' => $category]); //Search either title or description
+            }
+        
+            $results = array();
+            foreach ($queryResults as $result){
+              $results[] = ['listingName' => $result->TITLE, 'listingShortDescription' => $result->SHORTDESCRIPTION, 'listingImage' => $result->THUMBNAILS, 'listingPrice' => $result->PRICE, 'listingID' => $result->LISTINGSID];
+            }
         }
         $this->set('results',$results);
         $this->render();

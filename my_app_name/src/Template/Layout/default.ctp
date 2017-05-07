@@ -107,7 +107,7 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                 <ul class="nav navbar-nav">
                     <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'new_listing']); ?>>Sell</a></li>
                     <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?>>Dashboard</a></li>
-                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'login_registration']); ?>>Login</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?>>Login</a></li>
                 </ul>
             </div>
         </div>
