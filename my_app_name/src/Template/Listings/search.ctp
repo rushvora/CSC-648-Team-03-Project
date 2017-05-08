@@ -12,7 +12,7 @@ article {
 }
 </style>
 <?php foreach( $results as $result): ?>
-<a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'view', $result['listingID']]);?>>
+<a href="<?= $this->Url->build(['controller' => 'Listings', 'action' => 'view', $result['listingID']]);?>"target="_blank">
 	<div class="row" style="border: 1px solid #ccc;border-radius: 5px; overflow:hidden;padding: 10px; ">
 	 <div class="col-md-2" style="float:left;padding: 5px;">
           <img style="height:auto; max-height:160px; width:auto;max-width:160px;" src=<?= $result['listingImage'] ?> >
