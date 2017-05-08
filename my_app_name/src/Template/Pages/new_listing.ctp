@@ -2,19 +2,7 @@
 <form action=<?= $this->Url->build(['controller' => 'pages', 'action' => 'display', 'home']);?> >
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label for="images">Images</label>
-                    <input type="file" name="images" multiple>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="pickup">Pick-Up Location</label>
-                    <small> (Click to place)</small>
-                    <div id="map" style="padding-top: 100%;"></div>
-                </div>
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label for="title">Name</label>
                     <input type="text" class="form-control" id="title" placeholder="Name">
@@ -38,6 +26,16 @@
                 <div class="form-group">
                     <label for="description">Description</label>
                     <textarea class="form-control" rows="10" id="description" style="resize: none;" placeholder="Description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="images">Images</label>
+                    <input type="file" name="images" multiple>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="pickup">Pick-Up Location</label>
+                    <small> (Click to place)</small>
+                    <div id="map" style="padding-top: 50%;"></div>
                 </div>
             </div>
         </div>

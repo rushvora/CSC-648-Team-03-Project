@@ -37,52 +37,21 @@ class AppController extends Controller
      *
      * @return void
      */
-
     public function initialize()
     {
         parent::initialize();
 
+        $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth', [
-            'authenticate' => [
-                'Form' => [
-                    'fields' => ['username' => 'USERNAME', 'password' => 'PASSWORD'],
-                    'userModel' => 'Users'
-                ]
-            ],
-            'loginRedirect' => [
-                'controller' => 'pages',
-                'action' => 'display',
-                'home'
-            ],
-            'logoutRedirect' => [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home'
-            ]
-        ]);
-    }
 
-    public function beforeFilter(Event $event)
-    {
-        $this->Auth->allow(['index', 'view', 'display']);
-    }
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
+    }
 
-    public function isAuthorized($user) {
-      // Admin can access every action
-      if (isset($user['role']) && $user['role'] === 'admin') {
-        return true;
-      }
-
-      // Default deny
-      return false;
-   }
     /**
      * Before render callback.
      *
@@ -97,5 +66,39 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
+ public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array(
+                'controller' => 'posts',
+                'action' => 'index'
+            ),
+            'logoutRedirect' => array(
+                'controller' => 'posts',
+                'action' => 'visitors'
+            )
+        )
+    );
+
+    public function beforeFilter() {
+        $this->Auth->allow('index', 'view', 'visitors');
+    }
+
+    public function isAuthorized($user) {
+
+        if ($this->action === 'add') {
+            return true;
+        }
+
+
+        if (in_array($this->action, array('edit', 'delete'))) {
+            $postId = (int) $this->request->params['pass'][0];
+            if ($this->Post->isOwnedBy($postId, $user['id'])) {
+                return true;
+            }
+        }
+
+        return parent::isAuthorized($user);
+    }
+
 }
-?>

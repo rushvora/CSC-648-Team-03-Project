@@ -30,9 +30,9 @@ class ListingsTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('listings');
-        $this->displayField('ListingsId');
-        $this->primaryKey('ListingsId');
+        $this->setTable('listings');
+        $this->setDisplayField('ListingsId');
+        $this->setPrimaryKey('ListingsId');
     }
 
     /**
@@ -44,28 +44,37 @@ class ListingsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('ListingsId')
-            ->allowEmpty('ListingsId', 'create');
+            ->integer('LISTINGSID')
+            ->allowEmpty('LISTINGSID', 'create');
 
         $validator
-            ->requirePresence('Name', 'create')
-            ->notEmpty('Name');
+            ->requirePresence('TITLE', 'create')
+            ->notEmpty('TITLE');
 
         $validator
-            ->decimal('Price')
-            ->allowEmpty('Price');
+            ->decimal('PRICE')
+            ->allowEmpty('PRICE');
 
         $validator
-            ->allowEmpty('Seller');
+            ->allowEmpty('SELLER');
 
         $validator
-            ->allowEmpty('Image');
+            ->allowEmpty('PICTURE');
 
         $validator
-            ->allowEmpty('Category');
+            ->allowEmpty('CATEGORY');
 
         $validator
-            ->allowEmpty('Pick Up Location');
+            ->allowEmpty('PICKUPLOCATION');
+
+        $validator
+            ->allowEmpty('THUMBNAILS');
+
+        $validator
+            ->allowEmpty('DESCRIPTION');
+
+        $validator
+            ->allowEmpty('SHORTDESCRIPTION');
 
         return $validator;
     }

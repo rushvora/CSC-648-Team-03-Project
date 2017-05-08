@@ -8,13 +8,14 @@
       #map {
         height: 350px;
         width: 100%;
+        border-radius: 20px;
        }
 </style>
-
+<div style="padding-top: 1.25%;">
 <!--div is for left side of website, contains pictures of listins and contact seller-->
-<div style="float: left; width: 300px;">
+<div style="float: left; width: 300px; border-radius:20px; border: 1px solid #ccc; padding: 5px;text-align: center;">
         
-<div class="container" style="padding:0px">
+<div  style="padding:0px">
 
 <a href="#lightbox" data-toggle="modal"><img id="myImg" src="<?= $listingImage ?>" alt="<?= $listingName ?>" style="width:280px; padding: 5px;">
 </a> 
@@ -96,27 +97,36 @@
 <!-- End of left side div-->
 
 <!-- Listing Name, Listing Price, Listing Description, and soon to be google api-->
-         <article style="margin-left: 170px; border-left: 1px solid gray; padding: 1em; overflow: hidden;">
+         <article style=" padding-left: 20px; overflow: hidden;">
+    <div style= "border: 1px solid #ccc; border-radius: 20px; padding:5px">	
 	<h1><u><?= $listingName ?></u></h1>
-         <h3> Price: $<?= $listingPrice ?></h3>
-         <p><?=$listingDescription?></p>
+        <h5>Sold by: SellerName</h5>
+        <h5>Date Posted: 01/02/17</h5>
+        <h3> Price: $<?= $listingPrice ?></h3>
+    </div>
+<br></br>
 
-	<h3>Pickup Location</h3>
- <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: 37.7219, lng: -122.4782};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
+<div style="border: 1px solid #ccc; border-radius: 20px; padding: 5px">
+     <h3><u>Description</u></h3>
+     <p><?=$listingDescription?></p>
+     <h3>Pickup Location</h3>
+     <div id="map"></div>
+         <script>
+     	     function initMap() {
+             var uluru = {lat: 37.7219, lng: -122.4782};
+             var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 15,
+             center: uluru
+           });
+              var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+         </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
     </script>
+</div>
 	</article>
+</div>

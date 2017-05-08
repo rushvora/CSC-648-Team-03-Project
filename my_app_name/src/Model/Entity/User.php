@@ -1,23 +1,20 @@
 <?php
 namespace App\Model\Entity;
 
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 
 /**
- * Listing Entity
+ * User Entity
  *
- * @property int $LISTINGSID
- * @property string $TITLE
- * @property float $PRICE
- * @property string $SELLER
- * @property string $PICTURE
- * @property string $CATEGORY
- * @property string $PICKUPLOCATION
- * @property string $THUMBNAILS
- * @property string $DESCRIPTION
- * @property string $SHORTDESCRIPTION
+ * @property int $USERID
+ * @property string $USERNAME
+ * @property string $PASSWORD
+ * @property string $FULLNAME
+ * @property string $ROLE
+ * @property string $ADDRESS
  */
-class Listing extends Entity
+class User extends Entity
 {
 
     /**
@@ -31,6 +28,13 @@ class Listing extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'ListingsId' => false
+        'USERID' => false
     ];
+
+    protected function _setPASSWORD($password)
+    {
+        if (strlen($password) > 0) {
+            return (new DefaultPasswordHasher)->hash($password);
+        }
+    }
 }
