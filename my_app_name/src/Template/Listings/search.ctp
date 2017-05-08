@@ -13,6 +13,7 @@ article {
 }
  
 </style>
+<div align =right>
 <?php
 if (count($results) == 0)
 	 {
