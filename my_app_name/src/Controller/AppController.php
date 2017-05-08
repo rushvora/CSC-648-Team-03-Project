@@ -91,9 +91,16 @@ public function isAuthorized($user) {
 
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-	'loginRedirect' => [
-                'controller' => 'User',
-                'action' => 'index'
+            'authenticate' => [
+                'Form' => [
+                    'fields' => ['username' => 'USERNAME', 'password' => 'PASSWORD'],
+                    'userModel' =>'Users'
+                ]
+            ],
+	        'loginRedirect' => [
+                'controller' => 'pages',
+                'action' => 'display',
+                'home'
             ],
             'logoutRedirect' => [
                 'controller' => 'Pages',
