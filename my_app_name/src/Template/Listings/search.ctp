@@ -1,6 +1,7 @@
 
 <DOC html>
 <style>
+
 /*div.container {
   width: 100%;
   border: 1px solid gray;
@@ -46,17 +47,12 @@ if (count($results) == 0)
 <div style="padding: 10px;"></div>
 <?php endforeach; ?>
 <script>
-                function myFunction() {
-    var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
-    if (person != null) {
-        document.getElementById("demo").innerHTML =
-       "Your Message: " + person;
-    }
-                }
-                </script>
-
-
-
-
-
+		function myFunction() {
+             var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
+             if (person != null) {
+                 document.getElementById("demo").innerHTML =
+                    "Your Message: " + person;
+            }
+		}
+</script>
 
