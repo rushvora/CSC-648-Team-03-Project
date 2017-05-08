@@ -1,5 +1,6 @@
 <DOC html>
 <style>
+
 /*div.container {
   width: 100%;
   border: 1px solid gray;
@@ -33,10 +34,10 @@ article {
 <?php endforeach; ?>
 <script>
 		function myFunction() {
-    var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
-    if (person != null) {
-        document.getElementById("demo").innerHTML =
-       "Your Message: " + person;
-    }
+             var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
+             if (person != null) {
+                 document.getElementById("demo").innerHTML =
+                    "Your Message: " + person;
+            }
 		}
-		</script>
+</script>

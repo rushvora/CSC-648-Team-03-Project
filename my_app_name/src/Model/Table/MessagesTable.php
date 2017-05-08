@@ -30,9 +30,9 @@ class MessagesTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('messages');
-        $this->setDisplayField('MESSAGEID');
-        $this->setPrimaryKey('MESSAGEID');
+        $this->table('messages');
+        $this->displayField('MESSAGEID');
+        $this->primaryKey('MESSAGEID');
     }
 
     /**
@@ -46,6 +46,28 @@ class MessagesTable extends Table
         $validator
             ->integer('MESSAGEID')
             ->allowEmpty('MESSAGEID', 'create');
+
+        $validator
+            ->integer('SENDERID')
+            ->allowEmpty('SENDERID');
+
+        $validator
+            ->integer('RECIPIENTID')
+            ->allowEmpty('RECIPIENTID');
+
+        $validator
+            ->allowEmpty('SUBJECT');
+
+        $validator
+            ->allowEmpty('BODY');
+
+        $validator
+            ->dateTime('DATESENT')
+            ->allowEmpty('DATESENT');
+
+        $validator
+            ->integer('READSTATUS')
+            ->allowEmpty('READSTATUS');
 
         return $validator;
     }

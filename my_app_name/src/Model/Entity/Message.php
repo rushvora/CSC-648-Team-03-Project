@@ -7,6 +7,12 @@ use Cake\ORM\Entity;
  * Message Entity
  *
  * @property int $MESSAGEID
+ * @property int $SENDERID
+ * @property int $RECIPIENTID
+ * @property string $SUBJECT
+ * @property string $BODY
+ * @property \Cake\I18n\Time $DATESENT
+ * @property int $READSTATUS
  */
 class Message extends Entity
 {
