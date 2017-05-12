@@ -1,7 +1,7 @@
 <DOCTYPE html>
 
 <style>
-
+/*
 .modal-header {
     width: 700px;
     height: 200px
@@ -20,30 +20,30 @@
 .modal.and.carousel {
   position: absolute; // Needed because the carousel overrides the position property
 }
-
+*/
       #map {
-        height: 350px;
+       height: 350px;
         width: 100%;
         border-radius: 20px;
        }
 
 /* The Modal (background) */
-.modal {
+/*.modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+   /* position: fixed; /* Stay in place */
+   /* z-index: 1; /* Sit on top */
+    /*padding-top: 100px; /* Location of the box */
+   /* left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+   width: 100%; /* Full width */
+   /* height: 100%; /* Full height */
+   /* overflow: auto; /* Enable scroll if needed */
+  /*  background-color: rgb(0,0,0); /* Fallback color */
+   /* background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/*}
 
-/* Modal Content */
-.modal-content {
+/* Modal Content*/ 
+/*.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -52,7 +52,7 @@
 }
 
 /* The Close Button */
-.close {
+/*.close {
     color: #000;
     float: right;
     font-size: 28px;
@@ -65,7 +65,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-
+*/
 </style>
 <div style="padding-top: 1.25%;">
 <!--div is for left side of website, contains pictures of listins and contact seller-->
@@ -136,63 +136,49 @@
 
 		<p>Please click button to contact seller</p>
 
-                <!-- Trigger/Open The Modal -->
-<button id="myBtn">Contact Seller</button>
+ <!-- Trigger/Open The Modal -->
+<button id="myBtn"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Seller</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal" style="padding:100px; width:45%; left:25%">
 
   <!--Modal content -->
-  <div class="modal-content"style="overflow:hidden;">
-   <span class="close">&times;</span> 
-  <div style="float:left;text-align:left;">
-  <h3>To: Username</h3>
-  <h3>Subject: <?=$listingName?></h3>  
-  </div>
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+     
+        <div class="modal-body row">
+          <div class="col-lg-12">
+          
+            <div style= "float:left">
+              <h3>To: Username</h3>
+  	      <h3>Subject: listingName</h3>
+            </div>
+            
+            <div style= "float:right">
+  			  <form action="#">
+  			  <textarea name="message" rows="10" cols="40">Enter Message Here.</textarea>
+              </form>  
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default">Submit</button>
+        </div>
+        
+      </div>
 
-<div style="padding: 5px;"></div>
-  <div style="float:right">
-  <form action="#">
-  <textarea name="message" rows="10" cols="40">Enter Message Here.</textarea>
-  <br>
-  <input type="submit">
-  </div>
-</form>
-  </div>
 
+
+
+<!--End of The Modal-->
 </div>
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>		
-
-
-
-
-
 </div>
 <!-- End of left side div-->
 
