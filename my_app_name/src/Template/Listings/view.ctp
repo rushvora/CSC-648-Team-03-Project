@@ -1,6 +1,22 @@
 <DOCTYPE html>
 
 <style>
+
+.modal-header {
+    width: 700px;
+    height: 200px
+    position: relative;
+
+    text-align: center;
+
+    background: #fefefe ;
+}
+
+.modal-header .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 .modal.and.carousel {
   position: absolute; // Needed because the carousel overrides the position property
 }
@@ -10,10 +26,50 @@
         width: 100%;
         border-radius: 20px;
        }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 </style>
 <div style="padding-top: 1.25%;">
 <!--div is for left side of website, contains pictures of listins and contact seller-->
-<div style="float: left; width: 300px; border-radius:20px; border: 1px solid #ccc; padding: 5px;text-align: center;">
+<div style="float: left; width: 300px; border-radius:5px; border: 1px solid #ccc; padding: 5px;text-align: center;">
         
 <div  style="padding:0px">
 
@@ -80,25 +136,69 @@
 
 		<p>Please click button to contact seller</p>
 
-		<button onclick="myFunction()">Contact Seller</button>
+                <!-- Trigger/Open The Modal -->
+<button id="myBtn">Contact Seller</button>
 
-		<p id="demo"></p>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-		<script>
-		function myFunction() {
-    	var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
-    	if (person != null) {
-      	  document.getElementById("demo").innerHTML =
-       	 "Your Message: " + person;
-   		 }
-		}
-		</script>
+  <!--Modal content -->
+  <div class="modal-content"style="overflow:hidden;">
+   <span class="close">&times;</span> 
+  <div style="float:left;text-align:left;">
+  <h3>To: Username</h3>
+  <h3>Subject: <?=$listingName?></h3>  
+  </div>
+
+<div style="padding: 5px;"></div>
+  <div style="float:right">
+  <form action="#">
+  <textarea name="message" rows="10" cols="40">Enter Message Here.</textarea>
+  <br>
+  <input type="submit">
+  </div>
+</form>
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>		
+
+
+
+
+
 </div>
 <!-- End of left side div-->
 
 <!-- Listing Name, Listing Price, Listing Description, and soon to be google api-->
          <article style=" padding-left: 20px; overflow: hidden;">
-    <div style= "border: 1px solid #ccc; border-radius: 20px; padding:5px">	
+    <div style= "border: 1px solid #ccc; border-radius: 5px; padding:5px">	
 	<h1><u><?= $listingName ?></u></h1>
         <h5>Sold by: SellerName</h5>
         <h5>Date Posted: 01/02/17</h5>
@@ -106,7 +206,7 @@
     </div>
 <br></br>
 
-<div style="border: 1px solid #ccc; border-radius: 20px; padding: 5px">
+<div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px">
      <h3><u>Description</u></h3>
      <p><?=$listingDescription?></p>
      <h3>Pickup Location</h3>
@@ -124,6 +224,7 @@
             });
           }
          </script>
+
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
     </script>
