@@ -16,7 +16,8 @@ class MessagesController extends AppController
      * Index method
      *
      * @return \Cake\Network\Response|null
-     */
+     * 	Is used for as the list of all the messages a specific  user has
+    */
     public function index($uid = null)
     {
         $uid = $this->Auth->user('USERID');
@@ -49,8 +50,10 @@ class MessagesController extends AppController
      */
     public function add()
     {  	
-        $users=$this->Messages->find('all');
-	pr($users);
+	$uid = $this->Auth->user('USERID');
+
+        $users=$this->Messages->Users->findAllByUserid($uid);
+	//pr($users);
 	$this->set('users', $users);
 	$message = $this->Messages->newEntity();
         if ($this->request->is('post')) {
