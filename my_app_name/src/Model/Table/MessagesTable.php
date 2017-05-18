@@ -33,6 +33,8 @@ class MessagesTable extends Table
         $this->table('messages');
         $this->displayField('MESSAGEID');
         $this->primaryKey('MESSAGEID');
+	$this->belongsTo('users');
+//	     ->setForeignKey('RECIPIENTID');
     }
 
     /**

@@ -33,6 +33,8 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('USERID');
         $this->setPrimaryKey('USERID');
+	$this->hasMany('messages');
+//	     ->setForeignKey('RECIPIENTID');
     }
 
     /**
