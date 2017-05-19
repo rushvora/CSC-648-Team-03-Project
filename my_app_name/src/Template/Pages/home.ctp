@@ -9,8 +9,8 @@
 <br>
 <div class="container" style="text-align: center; padding-top: 2%;">
     <div class="row">
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'Furniture']); ?>>
                     <img src="/~sp17g03/content/images/chair.png">
                     <div class="caption">
@@ -19,8 +19,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'Electronics']); ?>>
                     <img src="/~sp17g03/content/images/MacBookPro.jpeg">
                     <div class="caption">
@@ -29,8 +29,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'Books']); ?>>
                     <img src="/~sp17g03/content/images/books.jpg">
                     <div class="caption">
@@ -40,9 +40,9 @@
             </div>
         </div>
     </div>
-    <div class="row" style="padding-top: 4%;">
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+    <div class="row" style="padding-top: 2%;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'Clothes']); ?>>
                     <img src="/~sp17g03/content/images/clothes.jpg">
                     <div class="caption">
@@ -51,8 +51,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'School Supplies']); ?>>
                     <img src="/~sp17g03/content/images/supplies.jpg">
                     <div class="caption">
@@ -61,8 +61,8 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto;">
+        <div class="col-sm-4">
+            <div class="btn-default thumbnail" style="width: 175px; height: 175px; margin: auto; margin-bottom: 38px;">
                 <a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'search', 'category' => 'Miscellaneous']); ?>>
                     <img src="/~sp17g03/content/images/misc.jpg">
                     <div class="caption">
@@ -79,7 +79,4 @@
 <br>
 <br>
 <br>
-<div style="margin-left:50%;">
-    <?= $this->Html->link('About',['controller' => 'Pages', 'action' => 'display', 'about']); ?>
-</div>
 
