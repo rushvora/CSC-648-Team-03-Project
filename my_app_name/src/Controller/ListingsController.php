@@ -40,6 +40,31 @@ class ListingsController extends AppController
     }
 
     /**
+     * Action for posting a new listing to the site.
+     *
+     * @param none
+     *
+     * @post Add a new row to the database, containing details of the new listing. New listing should also show up in search, and on the site itself.
+     */
+    public function add()
+	{
+		$listing = $this->Listings->newEntity();
+		if ($this->request->is('post')) 
+		{
+			$listing = $this->Listings->patchEntity($listing, $this->request->getData());
+			if ($this->Listings->save($listing))
+			{
+				$this->Flash->success(__('Your listing has been added.'));
+			}
+			else
+			{
+				$this->Flash->error(__('Unable to add your listing.'));
+			}
+		}
+		$this->set('listing', $listing);
+	}
+
+    /**
      * Action for searching for a listing.
      *
      * @param query The text to search for. Searches both the title and the description to find matching results
