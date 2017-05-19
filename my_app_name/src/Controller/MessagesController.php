@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\ORM\TableRegistry;
 
 /**
  * Messages Controller
@@ -15,13 +16,14 @@ class MessagesController extends AppController
      * Index method
      *
      * @return \Cake\Network\Response|null
-     */
-    public function index()
+     * 	Is used for as the list of all the messages a specific  user has
+    */
+    public function index($uid = null)
     {
-        $messages = $this->paginate($this->Messages);
-
-        $this->set(compact('messages'));
-        $this->set('_serialize', ['messages']);
+        $uid = $this->Auth->user('USERID');
+	pr($uid);		
+	$message= $this->Messages->findAllByRecipientid($uid);
+	$this->set('messages', $message);
     }
 
     /**
@@ -47,9 +49,15 @@ class MessagesController extends AppController
      * @return \Cake\Network\Response|null Redirects on successful add, renders view otherwise.
      */
     public function add()
-    {
-        $message = $this->Messages->newEntity();
+    {  	
+	$uid = $this->Auth->user('USERID');
+
+        $users=$this->Messages->Users->findAllByUserid($uid);
+	//pr($users);
+	$this->set('users', $users);
+	$message = $this->Messages->newEntity();
         if ($this->request->is('post')) {
+//		$this->Messages->save($this->request->data);
             $message = $this->Messages->patchEntity($message, $this->request->data);
             if ($this->Messages->save($message)) {
                 $this->Flash->success(__('The message has been saved.'));
@@ -62,30 +70,6 @@ class MessagesController extends AppController
         $this->set('_serialize', ['message']);
     }
 
-    /**
-     * Edit method
-     *
-     * @param string|null $id Message id.
-     * @return \Cake\Network\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Network\Exception\NotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $message = $this->Messages->get($id, [
-            'contain' => []
-        ]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $message = $this->Messages->patchEntity($message, $this->request->data);
-            if ($this->Messages->save($message)) {
-                $this->Flash->success(__('The message has been saved.'));
-
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('The message could not be saved. Please, try again.'));
-        }
-        $this->set(compact('message'));
-        $this->set('_serialize', ['message']);
-    }
 
     /**
      * Delete method
