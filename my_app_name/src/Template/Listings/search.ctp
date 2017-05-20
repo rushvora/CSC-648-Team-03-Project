@@ -12,6 +12,13 @@ article {
   padding: 1em;
   overflow: hidden;
 }
+.wrapper{
+	text-align:center;
+}
+.button {
+	position: absolute;
+	top:70%;
+}
  
 </style>
 <div align =right>
@@ -33,16 +40,18 @@ if (count($results) == 0)
 	 <div class="col-md-2" style="float:left;padding: 5px;">
           <img style="height:auto; max-height:160px; width:auto;max-width:160px;" src=<?= $result['listingImage'] ?> >
          </div>
-         <article>
-          <h1><u><?= $result['listingName'] ?></u></h1>
-          <h3>$ <?= $result ['listingPrice'] ?></h3>
-          <p><?= $result['listingShortDescription'] ?></p>
+         <div class="row" >
+          <div class= "col-md-8" >
+            <h1><u><?= $result['listingName'] ?></u></h1>
+            <h3>$ <?= $result ['listingPrice'] ?></h3>
+            <p><?= $result['listingShortDescription'] ?></p>
+	  </div>
 </a>
-         <div class="col-md-2" style="float: right;">
-          <button  style = "" onclick="myFunction()">Contact Seller</button>
-          <p id="demo"></p>
+         <div class="wrapper">
+           <button  style = "" onclick="myFunction()">Contact Seller</button>
+           <p id="demo"></p>
          </div>
-        </article>
+        </div>
 
 </div>
 <div style="padding: 10px;"></div>
