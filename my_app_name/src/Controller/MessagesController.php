@@ -56,6 +56,8 @@ class MessagesController extends AppController
 	//pr($users);
 	$this->set('users', $users);
 	$message = $this->Messages->newEntity();
+	$message->SENDERID = $uid;
+	$message->READSTATUS = '0';
         if ($this->request->is('post')) {
 //		$this->Messages->save($this->request->data);
             $message = $this->Messages->patchEntity($message, $this->request->data);

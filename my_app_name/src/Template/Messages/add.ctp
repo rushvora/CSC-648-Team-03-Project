@@ -14,7 +14,8 @@
     <fieldset>
         <legend><?= __('Add Message') ?></legend>
         <?php
-  	    echo $this->Form->input('user_id');
+//  	    echo $this->Form->input('user_id');
+	    $this->Form->input('user_id');
             echo $this->Form->input('RECIPIENTID');
             echo $this->Form->input('SUBJECT');
             echo $this->Form->input('BODY');
