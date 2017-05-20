@@ -13,7 +13,7 @@ cursor:pointer;
 </style>
 <div style="padding-top: 1.25%;">
 <!--div is for left side of website, contains pictures of listins and contact seller-->
-<div style="float: left; width: 300px; border-radius:5px; border: 1px solid #ccc; padding: 5px;text-align: center;">
+<div style="float: left; width: 25%; border-radius:5px; border: 1px solid #ccc; padding: 10px;text-align: center; overflow:hidden">
         
 <!--<div  style="padding:0px">
 <a href="#lightbox" data-toggle="modal"><img id="myImg" src="<?= $listingImage ?>" alt="<?= $listingName ?>" style="width:280px; padding: 5px;">
@@ -23,7 +23,7 @@ cursor:pointer;
 
 
  <!-- Trigger/Open The Modal -->
-<img id="myImg" src="<?= $listingImage ?>" data-toggle="modal" data-target="#picModal" width="280px" padding="5px">
+<img id="myImg" src="<?= $listingImage ?>" data-toggle="modal" data-target="#picModal" width="100%" padding="5px">
 <!-- The Modal -->
 <div id="picModal" class="modal" style="width:auto;max-width:500px; height:100%; left:30%; padding: 10%; overflow:hidden;">
 
@@ -84,6 +84,7 @@ cursor:pointer;
 </div>
 
 		<!--Pictures under bigger picture-->
+      <div class="row" style="padding:5px">  
         <a href="">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=left;padding: 2px">
         </a>
@@ -95,7 +96,7 @@ cursor:pointer;
         <a href="">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=right;padding: 2px">
         </a>
-
+      </div>
         <h5>All pictures were provided by google and w3schools.com </h5>
 		<!--                              -->
 
@@ -104,7 +105,7 @@ cursor:pointer;
 		<p>Please click button to contact seller</p>
 
  <!-- Trigger/Open The Modal -->
-<button id="myBtn"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Seller</button>
+<button id="myBtn"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"style="width:75%; font-size: 150%">Contact Seller</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal" style="padding:100px; width:45%; left:25%">
@@ -149,16 +150,16 @@ cursor:pointer;
 <!-- End of left side div-->
 
 <!-- Listing Name, Listing Price, Listing Description, and soon to be google api-->
-         <article style=" padding-left: 20px; overflow: hidden;">
+<article style=" padding-left: 15px; overflow:hidden; width: 75%px">
     <div style= "border: 1px solid #ccc; border-radius: 5px; padding:5px">	
 	<h1><u><?= $listingName ?></u></h1>
         <h5>Sold by: SellerName</h5>
         <h5>Date Posted: 01/02/17</h5>
         <h3> Price: $<?= $listingPrice ?></h3>
     </div>
-<br></br>
+    <br></br>
 
-<div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px">
+    <div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px">
      <h3><u>Description</u></h3>
      <p><?=$listingDescription?></p>
      <h3>Pickup Location</h3>
@@ -177,11 +178,11 @@ cursor:pointer;
           }
          </script>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
-    </script>
-</div>
-	</article>
+         <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
+         </script>
+     </div>
+</article>
 </div>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 

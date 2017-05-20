@@ -40,8 +40,8 @@ if (count($results) == 0)
 	 <div class="col-md-2" style="float:left;padding: 5px;">
           <img style="height:auto; max-height:160px; width:auto;max-width:160px;" src=<?= $result['listingImage'] ?> >
          </div>
-         <div class="row" >
-          <div class= "col-md-8" >
+         
+          <div class= "col-md-8" style="padding: 5px; overflow:hidden" >
             <h1><u><?= $result['listingName'] ?></u></h1>
             <h3>$ <?= $result ['listingPrice'] ?></h3>
             <p><?= $result['listingShortDescription'] ?></p>
@@ -51,7 +51,7 @@ if (count($results) == 0)
            <button  style = "" onclick="myFunction()">Contact Seller</button>
            <p id="demo"></p>
          </div>
-        </div>
+        
 
 </div>
 <div style="padding: 10px;"></div>
