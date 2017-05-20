@@ -6,6 +6,9 @@
         width: 100%;
         border-radius: 20px;
 }
+img:hover{
+cursor:pointer;
+}
 
 </style>
 <div style="padding-top: 1.25%;">
