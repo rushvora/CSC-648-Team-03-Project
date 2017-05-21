@@ -52,7 +52,9 @@ class MessagesController extends AppController
         $message = $this->Messages->get($id, [
             'contain' => []
         ]);
-
+	
+//	$this->Message->saveField('readStatus', 1);	
+	
         $this->set('message', $message);
         $this->set('_serialize', ['message']);
     }
@@ -73,7 +75,6 @@ class MessagesController extends AppController
 	$message->SENDERID = $uid;
 	$message->READSTATUS = '0';
         if ($this->request->is('post')) {
-//		$this->Messages->save($this->request->data);
             $message = $this->Messages->patchEntity($message, $this->request->data);
             if ($this->Messages->save($message)) {
                 $this->Flash->success(__('The message has been saved.'));
