@@ -21,19 +21,16 @@ article {
 }
  
 </style>
-<div align =right>
 <?php
 if (count($results) == 0)
 	 {
-        echo "No results were found";
 	 }
 	else
 	{
-	echo  count($results)." Items found ";
+	echo '<div style="text-align: right;">'.count($results)." Items found</div>";
 	}
 
 ?>
-</div>
 <?php foreach( $results as $result): ?>
 <a href="<?= $this->Url->build(['controller' => 'Listings', 'action' => 'view', $result['listingID']]);?>"target="_blank">
 	<div class="row" style="border: 1px solid #ccc;border-radius: 5px; overflow:hidden;padding: 10px; ">
