@@ -52,6 +52,7 @@ class PostsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Post->create();
+        		$this->request->data['Post']['UPLOAD_ID'] = $this->Auth->user('USERID');
 			if ($this->Post->save($this->request->data)) {
 				$this->Session->setFlash(__('The post has been saved.'));
 				return $this->redirect(array('action' => 'index'));

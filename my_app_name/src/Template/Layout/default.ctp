@@ -132,7 +132,7 @@ $cakeDescription = 'CSC 648 Team 03 Site';
         This website is a class project for CSC 648 at San Francisco State University. It is not a real website. We take no responsibility for any information entered into this site. For Demonstration Only.
     </div>
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    <div class="container clearfix" style="padding-bottom: 50px;">
         <?= $this->fetch('content') ?>
     </div>
     <footer>
