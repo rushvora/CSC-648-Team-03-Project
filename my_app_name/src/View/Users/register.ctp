@@ -1,3 +1,5 @@
+<head>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <?php $this->start("page_content");
 $flash=$this->Session->flash(); 
 
@@ -12,6 +14,8 @@ if (isset($flash) &&!empty($flash)) :?>
 </div>
 <div class="row">
 <div class="medium-6 medium-offset-3">
+      <div class="g-recaptcha" data-sitekey="6LdqMiEUAAAAAPhlWyJ0Ljlj9BPBQxwr7TyptR8k"></div>
+
 <?php echo$this->Form->create("User");
 echo $this->Form->input("username",
 array("label"=>'Username:')
@@ -34,7 +38,9 @@ array('class'=>'button  medium radius success ',
         )
       );
 ?>
+
 </div>
 </div>
 
 <?php$this->end(); ?>
+</head>

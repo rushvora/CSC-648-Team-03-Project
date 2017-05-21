@@ -23,13 +23,37 @@ class UsersController extends AppController {
    public function register()
     {
         $user = $this->Users->newEntity();
+	
         if ($this->request->is('post')) {
+
+	$response = $_POST["g-recaptcha-response"];
+	$url = 'https://www.google.com/recaptcha/api/siteverify';
+	$data = http_build_query(array(
+		'secret' => '6LdoBh0UAAAAAC10aBiLRn9kDIabX6JzzK6vpfMO',
+		'response' => $_POST["g-recaptcha-response"]
+	));
+	$options = array(
+		'http' => array (
+			'method' => 'POST',
+                        'header'=>"content-type: application/x-www-form-urlencoded\r\n" . "Content-Length: " . strlen($data) . "\r\n",
+			'content' => $data
+		)
+	);
+	$context  = stream_context_create($options);
+	$verify = file_get_contents($url, false, $context);
+	$captcha_success=json_decode($verify);
+
+
+
 //            $user = $this->Users->patchEntity($user, $this->request->getData());
 	//_POST is an array and password 
 	     $user->set(['USERNAME' => $_POST['username'],'PASSWORD' => $_POST['password'], 'EMAIL' => $_POST['email']]);
             if(substr($user->get('EMAIL'),-13)!='mail.sfsu.edu'){
                $this->Flash->error(__('Please add sfsu email address,'));
 	    }
+	    else if($captcha_success->success==false) {
+		$this->Flash->error(__('Captcha verification failed. Please try again.'));
+	    } 
 	    else {
 	        if ($this->Users->save($user)) {
                     $this->Flash->success(__('The user has been saved.'));
