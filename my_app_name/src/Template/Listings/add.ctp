@@ -1,11 +1,24 @@
 <h1 style="text-align: center; margin-top: 0%;">New Listing</h1>
-<form action=<?= $this->Url->build(['controller' => 'pages', 'action' => 'display', 'home']);?> >
+<!--<form action= $this->Url->build(['controller' => 'pages', 'action' => 'display', 'home']); >
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label for="title">Name</label>
-                    <input type="text" class="form-control" id="title" placeholder="Name">
+-->
+					<?= $this->Form->create() ?>
+					<?= $this->Form->input('TITLE') ?>
+					<?= $this->Form->input('PRICE') ?>
+					<?= $this->Form->input('CATEGORY') ?>
+					<?= $this->Form->input('DESCRIPTION') ?>
+					<?= $this->Form->button(__('Post Listing')) ?>
+					<?= $this->Form->end() ?>
+<!--				</div>
+			</div>
+		</div>
+	</div>
+</form>-->
+<!--                    <label for="title">Name</label>
+                    <input type="text" class="form-control" id="title" placeholder="Name" >
                 </div>
                 <div class="form-group">
                     <label for="category">Category</label>
@@ -80,3 +93,4 @@
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap" async defer></script>
+-->

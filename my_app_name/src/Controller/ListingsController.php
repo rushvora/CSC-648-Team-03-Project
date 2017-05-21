@@ -15,6 +15,7 @@ class ListingsController extends AppController
     {
         parent::beforeFilter($event);
         $this->Auth->allow(['view','search']);
+		$this->loadComponent('Flash');
     }
 
     /**
@@ -49,19 +50,24 @@ class ListingsController extends AppController
     public function add()
 	{
 		$listing = $this->Listings->newEntity();
+		$listing->SELLER = 'null';
+		$listing->PICTURE = 'null';
+		$listing->PICKUPLOCATION = 'null';
+		$listing->THUMBNAILS = 'null';
+		$listing->SHORTDESCRIPTION = 'null';
+		
 		if ($this->request->is('post')) 
 		{
 			$listing = $this->Listings->patchEntity($listing, $this->request->getData());
 			if ($this->Listings->save($listing))
 			{
 				$this->Flash->success(__('Your listing has been added.'));
+				return $this->redirect(['action' => 'index']);
 			}
-			else
-			{
-				$this->Flash->error(__('Unable to add your listing.'));
-			}
+			$this->Flash->error(__('Unable to add your listing.'));
 		}
-		$this->set('listing', $listing);
+		$this->set(compact('listing'));
+		$this->set('_serialize', ['message']);
 	}
 
     /**

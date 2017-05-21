@@ -18,13 +18,19 @@ class UsersFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'USERID' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
-        'USERNAME' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'PASSWORD' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'FULLNAME' => ['type' => 'string', 'length' => 255, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'USERNAME' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'PASSWORD' => ['type' => 'string', 'length' => 64, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'ROLE' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => 'user', 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'ADDRESS' => ['type' => 'text', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null],
+        'GROUPID' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'CREATED' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'MODIFIED' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
+        'EMAIL' => ['type' => 'string', 'length' => 45, 'null' => true, 'default' => null, 'collate' => 'latin1_swedish_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'ACTIVE' => ['type' => 'integer', 'length' => 4, 'unsigned' => false, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['USERID'], 'length' => []],
+            'USERID_UNIQUE' => ['type' => 'unique', 'columns' => ['USERID'], 'length' => []],
+            'USERNAME_UNIQUE' => ['type' => 'unique', 'columns' => ['USERNAME'], 'length' => []],
+            'EMAIL_UNIQUE' => ['type' => 'unique', 'columns' => ['EMAIL'], 'length' => []],
         ],
         '_options' => [
             'engine' => 'InnoDB',
@@ -43,9 +49,12 @@ class UsersFixture extends TestFixture
             'USERID' => 1,
             'USERNAME' => 'Lorem ipsum dolor sit amet',
             'PASSWORD' => 'Lorem ipsum dolor sit amet',
-            'FULLNAME' => 'Lorem ipsum dolor sit amet',
             'ROLE' => 'Lorem ipsum dolor sit amet',
-            'ADDRESS' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.'
+            'GROUPID' => 1,
+            'CREATED' => '2017-05-20 22:42:21',
+            'MODIFIED' => '2017-05-20 22:42:21',
+            'EMAIL' => 'Lorem ipsum dolor sit amet',
+            'ACTIVE' => 1
         ],
     ];
 }

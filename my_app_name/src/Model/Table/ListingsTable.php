@@ -76,6 +76,10 @@ class ListingsTable extends Table
         $validator
             ->allowEmpty('SHORTDESCRIPTION');
 
+        $validator
+            ->dateTime('DATEPOSTED')
+            ->allowEmpty('DATEPOSTED');
+
         return $validator;
     }
 }

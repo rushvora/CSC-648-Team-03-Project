@@ -1,7 +1,6 @@
 <?php
 namespace App\Model\Entity;
 
-use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
 
 /**
@@ -10,9 +9,14 @@ use Cake\ORM\Entity;
  * @property int $USERID
  * @property string $USERNAME
  * @property string $PASSWORD
- * @property string $FULLNAME
  * @property string $ROLE
- * @property string $ADDRESS
+ * @property int $GROUPID
+ * @property \Cake\I18n\Time $CREATED
+ * @property \Cake\I18n\Time $MODIFIED
+ * @property string $EMAIL
+ * @property int $ACTIVE
+ *
+ * @property \App\Model\Entity\Message[] $messages
  */
 class User extends Entity
 {
@@ -31,10 +35,10 @@ class User extends Entity
         'USERID' => false
     ];
 
-    protected function _setPASSWORD($password)
-    {
-        if (strlen($password) > 0) {
-            return (new DefaultPasswordHasher)->hash($password);
-        }
-    }
+	protected function _setPASSWORD($password)
+	{
+		if(strlen($password) > 0) {
+			return (new DefaultPasswordHasher)->hash($password);
+		}
+	}
 }

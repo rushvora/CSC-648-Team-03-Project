@@ -30,11 +30,10 @@ class MessagesTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('messages');
-        $this->displayField('MESSAGEID');
-        $this->primaryKey('MESSAGEID');
-	$this->belongsTo('users');
-//	     ->setForeignKey('RECIPIENTID');
+        $this->setTable('messages');
+        $this->setDisplayField('MESSAGEID');
+        $this->setPrimaryKey('MESSAGEID');
+		$this->belongsTo('users');
     }
 
     /**
@@ -51,11 +50,13 @@ class MessagesTable extends Table
 
         $validator
             ->integer('SENDERID')
-            ->allowEmpty('SENDERID');
+            ->requirePresence('SENDERID', 'create')
+            ->notEmpty('SENDERID');
 
         $validator
             ->integer('RECIPIENTID')
-            ->allowEmpty('RECIPIENTID');
+            ->requirePresence('RECIPIENTID', 'create')
+            ->notEmpty('RECIPIENTID');
 
         $validator
             ->allowEmpty('SUBJECT');

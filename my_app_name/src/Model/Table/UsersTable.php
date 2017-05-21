@@ -33,8 +33,7 @@ class UsersTable extends Table
         $this->setTable('users');
         $this->setDisplayField('USERID');
         $this->setPrimaryKey('USERID');
-	$this->hasMany('messages');
-//	     ->setForeignKey('RECIPIENTID');
+		$this->hasMany('messages');
     }
 
     /**
@@ -47,25 +46,56 @@ class UsersTable extends Table
     {
         $validator
             ->integer('USERID')
-            ->allowEmpty('USERID', 'create');
+            ->allowEmpty('USERID', 'create')
+            ->add('USERID', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->allowEmpty('USERNAME');
+            ->allowEmpty('USERNAME')
+            ->add('USERNAME', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
             ->allowEmpty('PASSWORD');
-
-        $validator
-            ->allowEmpty('FULLNAME');
 
         $validator
             ->requirePresence('ROLE', 'create')
             ->notEmpty('ROLE');
 
         $validator
-            ->requirePresence('ADDRESS', 'create')
-            ->notEmpty('ADDRESS');
+            ->integer('GROUPID')
+            ->allowEmpty('GROUPID');
+
+        $validator
+            ->dateTime('CREATED')
+            ->allowEmpty('CREATED');
+
+        $validator
+            ->dateTime('MODIFIED')
+            ->allowEmpty('MODIFIED');
+
+        $validator
+            ->allowEmpty('EMAIL')
+            ->add('EMAIL', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
+
+        $validator
+            ->integer('ACTIVE')
+            ->allowEmpty('ACTIVE');
 
         return $validator;
+    }
+
+    /**
+     * Returns a rules checker object that will be used for validating
+     * application integrity.
+     *
+     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
+     * @return \Cake\ORM\RulesChecker
+     */
+    public function buildRules(RulesChecker $rules)
+    {
+        $rules->add($rules->isUnique(['USERID']));
+        $rules->add($rules->isUnique(['USERNAME']));
+        $rules->add($rules->isUnique(['EMAIL']));
+
+        return $rules;
     }
 }
