@@ -108,7 +108,11 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                 <ul class="nav navbar-nav visible-lg">
                     <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add', 'add']); ?>>Sell</a></li>
                     <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?>>Dashboard</a></li>
-                    <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?>>Login</a></li>
+                    <?php if ($this->request->session()->read('Auth.User.USERNAME') == null): ?>
+                        <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?>>Login</a></li>
+                    <?php else: ?>
+                        <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'logout']); ?>>Logout</a></li>
+                    <?php endif; ?>
                 </ul>
                 <ul class="nav navbar-nav visible-md">
                     <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add', 'add']); ?> style="padding: 15px 10px;">Sell</a></li>

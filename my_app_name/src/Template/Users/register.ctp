@@ -9,6 +9,12 @@
         <?= $this->Form->control('email', ['maxlength'=>'60']) ?>
         <?= $this->Form->control('password', ['maxlength' => '30']) ?>
 	<div class="g-recaptcha" data-sitekey="6LdoBh0UAAAAAMh3soyX9qhZJmPSr33oJy6-edt9"></div>
+	<?= $this->Form->checkbox('agree'); ?>
+	I agree to the
+	<?= $this->Html->link('Privacy Policy',['controller' => 'Pages', 'action' => 'display', 'privacy']); ?>
+	&
+	<?= $this->Html->link('Terms of Use',['controller' => 'Pages', 'action' => 'display', 'legal']); ?>
+	
    </fieldset>
 <?= $this->Form->button(__('Submit')); ?>
 <?= $this->Form->end() ?>
