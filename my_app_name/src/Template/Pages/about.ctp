@@ -55,7 +55,7 @@
                 <a href="../pages/about/rush" style="color: #000;">
                     <h3 style="margin-top: 0; margin-bottom: 1%;">Rushabh Vora</h3>
                     <h4 style="margin-top: 0;">Back End</h4>
-                    <img src="/~sp17g03/content/static/" style="width: 125px; height: 125px;">
+                    <img src="/~sp17g03/content/static/rushabh.jpg" style="width: 125px; height: 125px;">
                 </a>
             </div>
         </div>
