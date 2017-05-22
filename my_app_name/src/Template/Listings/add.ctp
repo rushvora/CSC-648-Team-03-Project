@@ -19,9 +19,7 @@
                 <label for="description">Description</label>
                 <?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'Description. The first sentence will be used as a shorter description for your listing.']) ?>
             </div>
-            <?= $this->Form->button(__('Post Listing')) ?>
-            <?= $this->Flash->render() ?>
-            <?= $this->Form->end() ?>
+            
             
             <div class="form-group">
                 <label for="images">Images</label>
@@ -40,8 +38,10 @@
                 <button class="btn btn-default" style="width: 100%;" onclick="goBack()">Cancel</button>
             </div>
             <div class="col-md-3 col-md-offset-6">
-                <input class="btn btn-default" style="width: 100%;" type="submit" value="Post">
+                <?= $this->Form->button(__('Post Listing', ['width' => '100%'])) ?>
             </div>
+            <?= $this->Flash->render() ?>
+            <?= $this->Form->end() ?>
         </div>
 </div>
 <script>
