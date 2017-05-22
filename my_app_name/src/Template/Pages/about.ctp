@@ -46,7 +46,7 @@
                 <a href="../pages/about/skylar" style="color: #000;">
                     <h3 style="margin-top: 0; margin-bottom: 1%;">Skylar Miles</h3>
                     <h4 style="margin-top: 0;">Front End</h4>
-                    <img src="/~sp17g03/content/static/" style="width: 125px; height: 125px;">
+                    <img src="/~sp17g03/content/static/skylar.jpg" style="width: 125px; height: 125px;">
                 </a>
             </div>
         </div>
