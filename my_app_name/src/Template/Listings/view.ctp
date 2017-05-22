@@ -16,7 +16,7 @@ cursor:pointer;
 <div style="float: left; width: 25%; border-radius:5px; border: 1px solid #ccc; padding: 10px;text-align: center; overflow:hidden">
         
  <!-- Trigger/Open The Modal -->
-<img id="myImg" src="<?= $listingImage ?>" data-toggle="modal" data-target="#picModal" width="100%" padding="5px">
+<?php echo $this->Html->image('../files/listings/PICTURE/' . $listingDir . '/square_' .  $listingImage); ?>
 <!-- The Modal -->
 <div id="picModal" class="modal" style="width:auto;max-width:500px; height:100%; left:30%; padding: 10%; overflow:hidden;">
 
@@ -27,7 +27,7 @@ cursor:pointer;
       <h4 class="modal-title"><b> <?= $listingName ?></b>: $<?= $listingPrice ?> </h4>
     </div>     
             <div class="item active">
-              <img src="<?=$listingImage?>" style= "width: 70%; height: 70%">
+				<?php echo $this->Html->image('../files/listings/PICTURE/' . $listingDir . '/square_' .  $listingImage); ?>              
             </div> 
         
         <div class="modal-footer">
@@ -48,8 +48,8 @@ cursor:pointer;
 <div style=" padding-left: 15px; overflow:hidden; width: 75%px">
     <div style= "border: 1px solid #ccc; border-radius: 5px; padding:5px">	
 	<h1><u><?= $listingName ?></u></h1>
-        <h5>Sold by: SellerName</h5>
-        <h5>Date Posted: 01/02/17</h5>
+        <h5>Sold by: <?= $sellerName ?></h5>
+        <h5>Date Posted: <?= $listingDate ?></h5>
         <h3> Price: $<?= $listingPrice ?></h3>
     </div>
     <br></br>

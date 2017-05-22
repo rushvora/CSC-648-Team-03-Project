@@ -35,9 +35,9 @@ if (count($results) == 0)
 <a href="<?= $this->Url->build(['controller' => 'Listings', 'action' => 'view', $result['listingID']]);?>"target="_blank">
 	<div class="row" style="border: 1px solid #ccc;border-radius: 5px; overflow:hidden;padding: 10px; ">
 	 <div class="col-md-2" style="float:left;padding: 5px;">
-    <!--	<?php// echo $this->Html->image('../files/listings/PICTURE/' . $data->get('PICTUREDIR') . '' .  $data->get('PICTURE')); ?> -->
-	</div>
-          <div class= "col-md-8" style="padding: 5px; overflow:hidden" >
+		<?php echo $this->Html->image('../files/listings/PICTURE/' . $result['listingDir'] . '/square_' .  $result['listingImage']); ?>
+		  </div>
+          <div class= "col-md-8" style="padding: 30px; overflow:hidden" >
             <h1><u><?= $result['listingName'] ?></u></h1>
             <h3>$ <?= $result ['listingPrice'] ?></h3>
             <p><?= $result['listingShortDescription'] ?></p>
