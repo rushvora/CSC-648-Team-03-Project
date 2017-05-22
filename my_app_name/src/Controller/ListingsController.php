@@ -37,7 +37,7 @@ class ListingsController extends AppController
           $this->set('listingImage',$listing->PICTURE);
           break;
         }
-        $this->render();
+      $this->render(); 
     }
 
     /**

@@ -106,8 +106,8 @@ $cakeDescription = 'CSC 648 Team 03 Site';
             </div>
             <div class="col-md-3 col-sm-1 col-xs-2" id="navbar">
                 <ul class="nav navbar-nav visible-lg">
-                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add', 'add']); ?>>Sell</a></li>
-                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?>>Dashboard</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add']); ?>>Sell</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']); ?>>Dashboard</a></li>
                     <?php if ($this->request->session()->read('Auth.User.USERNAME') == null): ?>
                         <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?>>Login</a></li>
                     <?php else: ?>
@@ -115,15 +115,15 @@ $cakeDescription = 'CSC 648 Team 03 Site';
                     <?php endif; ?>
                 </ul>
                 <ul class="nav navbar-nav visible-md">
-                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add', 'add']); ?> style="padding: 15px 10px;">Sell</a></li>
-                    <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?> style="padding: 15px 10px;">Dashboard</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add']); ?> style="padding: 15px 10px;">Sell</a></li>
+                    <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']); ?> style="padding: 15px 10px;">Dashboard</a></li>
                     <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?> style="padding: 15px 10px;">Login</a></li>
                 </ul>
                 <div class="hidden-lg hidden-md btn-group" style="float:right;">
                     <button type="button" class="btn btn-default dropdown-toggle" style="margin-top: 7px; padding: 6px;" data-toggle="dropdown"><img src="/~sp17g03/content/icons/menu.png"></img></button>
                     <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add', 'add']); ?>>Sell</a></li>
-                        <li><a href=<?= $this->Url->build(['controller' => 'Pages', 'action' => 'display', 'dashboard']); ?>>Dashboard</a></li>
+                        <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'add']); ?>>Sell</a></li>
+                        <li><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']); ?>>Dashboard</a></li>
                         <li><a href=<?= $this->Url->build(['controller' => 'Users', 'action' => 'login']); ?>>Login</a></li>
                     </ul>
                 </div>
