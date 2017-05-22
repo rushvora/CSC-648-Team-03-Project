@@ -4,20 +4,17 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Listing Entity
+ * Upload Entity
  *
- * @property int $LISTINGSID
- * @property string $TITLE
- * @property float $PRICE
- * @property string $SELLER
- * @property string $PICTURE
- * @property string $CATEGORY
- * @property string $PICKUPLOCATION
- * @property string $THUMBNAILS
- * @property string $DESCRIPTION
- * @property string $SHORTDESCRIPTION
+ * @property int $UPLOADID
+ * @property string $MODEL
+ * @property int $FOREIGNKEY
+ * @property string $ATTACHMENT
+ * @property string $DIR
+ * @property int $SIZE
+ * @property bool $ACTIVE
  */
-class Listing extends Entity
+class Upload extends Entity
 {
 
     /**
@@ -31,6 +28,6 @@ class Listing extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'ListingsId' => false
+        'UPLOADID' => false
     ];
 }
