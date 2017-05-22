@@ -1,52 +1,40 @@
 <h1 style="text-align: center; margin-top: 0%;">New Listing</h1>
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="form-group">
-				<?= $this->Form->create() ?>
-					
-				<?= $this->Form->text('TITLE', ['placeholder' => 'Name']) ?>
-				<?= $this->Form->select('CATEGORY', ['Books' => 'Books','Clothes' => 'Clothes','Electronics' => 'Electronics','Furniture' => 'Furniture','School Supplies' => 'School Supplies','Miscellaneous' => 'Miscellaneous'], ['empty' => 'Choose one'])  ?>
-				<?= $this->Form->number('PRICE',[ 'min' => '0.01','step' => '0.01','placeholder' => 'Price']) ?>
-				<?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'The first sentence will be used as a shorter description for your listing.']) ?>
-				<?= $this->Form->button(__('Post Listing')) ?>
-				<?= $this->Flash->render() ?>
-				<?= $this->Form->end() ?>
-              <label for="title">Name</label>
-                    <input type="text" class="form-control" id="title" placeholder="Name" >
-                </div>
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <select class="form-control" id="category">
-                        <option>Choose...</option>
-                        <option>Books</option>
-                        <option>Clothes</option>
-                        <option>Electronics</option>
-                        <option>Furniture</option>
-                        <option>School Supplies</option>
-                        <option>Miscellaneous</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="price">Price</label>
-                    <input type="text" class="form-control" id="price" placeholder="Price">
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea class="form-control" rows="10" id="description" style="resize: none;" placeholder="Description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="images">Images</label>
-                    <input type="file" name="images" multiple>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="pickup">Pick-Up Location</label>
-                    <small> (Click to place)</small>
-                    <div id="map" style="padding-top: 50%;"></div>
-                </div>
+    <div class="row">
+        <div class="col-md-12">
+            <?= $this->Form->create() ?>
+            <div class="form-group">
+                <label for="title">Name</label>
+                <?= $this->Form->text('TITLE', ['placeholder' => 'Name']) ?>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <?= $this->Form->select('CATEGORY', ['Books' => 'Books','Clothes' => 'Clothes','Electronics' => 'Electronics','Furniture' => 'Furniture','School Supplies' => 'School Supplies','Miscellaneous' => 'Miscellaneous'], ['empty' => 'Choose one'])  ?>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <?= $this->Form->number('PRICE',[ 'min' => '0.01','step' => '0.01','placeholder' => 'Price']) ?>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'Description. The first sentence will be used as a shorter description for your listing.']) ?>
+            </div>
+            <?= $this->Form->button(__('Post Listing')) ?>
+            <?= $this->Flash->render() ?>
+            <?= $this->Form->end() ?>
+            
+            <div class="form-group">
+                <label for="images">Images</label>
+                <input type="file" name="images" multiple>
+           </div>
+            <br>
+            <div class="form-group">
+                <label for="pickup">Pick-Up Location</label>
+                <small> (Click to place)</small>
+                <div id="map" style="padding-top: 50%;"></div>
             </div>
         </div>
+    </div>
         <div class="row">
             <div class="col-md-3">
                 <button class="btn btn-default" style="width: 100%;" onclick="goBack()">Cancel</button>
@@ -55,8 +43,7 @@
                 <input class="btn btn-default" style="width: 100%;" type="submit" value="Post">
             </div>
         </div>
-    </div>
-</form>
+</div>
 <script>
     function goBack() {
         if (confirm("Are you sure you want to leave this page?\n\nAll data you have entered will be lost.") == true) {
