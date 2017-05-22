@@ -13,10 +13,10 @@ use Cake\ORM\Entity;
  * @property string $PICTURE
  * @property string $CATEGORY
  * @property string $PICKUPLOCATION
- * @property string $THUMBNAILS
  * @property string $DESCRIPTION
  * @property string $SHORTDESCRIPTION
  * @property \Cake\I18n\Time $DATEPOSTED
+ * @property string $PICTUREDIR
  */
 class Listing extends Entity
 {

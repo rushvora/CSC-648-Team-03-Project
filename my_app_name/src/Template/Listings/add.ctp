@@ -2,28 +2,32 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <?= $this->Form->create() ?>
+            <?= $this->Form->create($listing, ['type' => 'file']) ?>
             <div class="form-group">
                 <label for="title">Name</label>
-                <?= $this->Form->text('TITLE', ['placeholder' => 'Name']) ?>
+				<br />
+                <?= $this->Form->text('TITLE', ['class' => 'form-control','placeholder' => 'Name']) ?>
             </div>
             <div class="form-group">
                 <label for="category">Category</label>
-                <?= $this->Form->select('CATEGORY', ['Books' => 'Books','Clothes' => 'Clothes','Electronics' => 'Electronics','Furniture' => 'Furniture','School Supplies' => 'School Supplies','Miscellaneous' => 'Miscellaneous'], ['empty' => 'Choose one'])  ?>
+                <br />
+				<?= $this->Form->select('CATEGORY', ['Books' => 'Books','Clothes' => 'Clothes','Electronics' => 'Electronics','Furniture' => 'Furniture','School Supplies' => 'School Supplies','Miscellaneous' => 'Miscellaneous'], ['empty' => 'Choose one', 'class' => 'form-control'])  ?>
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <?= $this->Form->number('PRICE',[ 'min' => '0.01','step' => '0.01','placeholder' => 'Price']) ?>
+                <br />
+				<?= $this->Form->number('PRICE',[ 'min' => '0.01','step' => '0.01','placeholder' => 'Price', 'class' => 'form-control']) ?>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'Description. The first sentence will be used as a shorter description for your listing.']) ?>
+                <br />
+				<?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'Description. The first sentence will be used as a shorter description for your listing.', 'class' => 'form-control']) ?>
             </div>
             
             
             <div class="form-group">
                 <label for="images">Images</label>
-                <input type="file" name="images" multiple>
+				<?= $this->Form->file('PICTURE') ?>
            </div>
             <br>
             <div class="form-group">
@@ -38,11 +42,11 @@
                 <button class="btn btn-default" style="width: 100%;" onclick="goBack()">Cancel</button>
             </div>
             <div class="col-md-3 col-md-offset-6">
-                <?= $this->Form->button(__('Post Listing', ['width' => '100%'])) ?>
+                <?= $this->Form->button(__('Post Listing'), ['type' => 'button','style' => 'width: 100%', 'class' => 'btn btn-default']) ?>
             </div>
-            <?= $this->Flash->render() ?>
-            <?= $this->Form->end() ?>
-        </div>
+        </div>	
+        <?= $this->Flash->render() ?>
+        <?= $this->Form->end() ?>
 </div>
 <script>
     function goBack() {

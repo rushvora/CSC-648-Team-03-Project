@@ -43,14 +43,17 @@ class ListingsController extends AppController
     /**
      * Action for posting a new listing to the site.
      *
-     * @param none
+     * @param userid The user who is uploading a new listing to the site.
      *
      * @post Add a new row to the database, containing details of the new listing. New listing should also show up in search, and on the site itself.
      */
-    public function add()
+    public function add($uid=null)
 	{
+		$uid = $this->Auth->user('USERID');
 		$listing = $this->Listings->newEntity();
-		
+		$this->loadModel('Users');	
+		$userName = $this->Users->find()->select(['USERNAME'])->where(['USERID LIKE' => "$uid"]);
+		$listing->SELLER = $userName;
 		if ($this->request->is('post')) 
 		{
 			$listing = $this->Listings->patchEntity($listing, $this->request->getData());	
@@ -73,14 +76,15 @@ class ListingsController extends AppController
 	public function myListings($uid=null)
 	{
 		$uid = $this->Auth->user('USERID');
-		$userName = $this->Users->find()->select(['Username'])->where(['Userid LIKE' => "$uid"]);
-		$listingsResults = $this->Listings->find()->where(['Seller LIKE' => "$userName"]);
+		$this->loadModel('Users');
+		$userName = $this->Users->find()->select(['USERNAME'])->where(['USERID LIKE' => "$uid"]);
+		$listingsResults = $this->Listings->find()->where(['SELLER LIKE' => "$userName"]);
 
 		$listingsResults = $listingsResults->toArray();
 		$displayResults = array();
 		foreach($listingsResults as $listingResult)
 		{
-			$displayResults[] = ['listingName' => $listingResult->TITLE, 'listingShortDescription' => $listingResult->SHORTDESCRIPTION, 'listingImage' => $listingResult->THUMBNAILS, 'listingPrice' => $listingResult->PRICE, 'listingCategory' => $listingResult->CATEGORY, 'listingDate' => $listingResult->DATEPOSTED];
+			$displayResults[] = ['listingName' => $listingResult->TITLE, 'listingShortDescription' => $listingResult->SHORTDESCRIPTION, 'listingImage' => $listingResult->PICTURE, 'listingPrice' => $listingResult->PRICE, 'listingCategory' => $listingResult->CATEGORY, 'listingDate' => $listingResult->DATEPOSTED];
 		}
 		$this->set('displayResults', $displayResults);
 		$this->render();

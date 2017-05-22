@@ -37,6 +37,22 @@ class ListingsTable extends Table
 		$this->belongsTo('users')
 			 ->setForeignKey('SELLER')
 			 ->bindingKey('USERNAME');
+		/**
+		 * addBehaviour method for the Image Upload Plugin "Proffer"
+		 *
+		 */
+		$this->addBehavior('Proffer.Proffer', 
+									['PICTURE' => 
+										['root' => WWW_ROOT . 'files',
+										'dir' => 'PICTUREDIR',
+										'thumbnailSizes' => 
+											['square' => ['w' => 200, 'h' => 200, 'jpeg_quality' => 100],
+										 	 'portrait' => ['w' => 100, 'h' => 300],
+											],
+										'thumbnailMethod' => 'gd'
+										]
+									]
+							);	
     }
 
     /**
@@ -72,9 +88,6 @@ class ListingsTable extends Table
             ->allowEmpty('PICKUPLOCATION');
 
         $validator
-            ->allowEmpty('THUMBNAILS');
-
-        $validator
             ->allowEmpty('DESCRIPTION');
 
         $validator
@@ -83,6 +96,9 @@ class ListingsTable extends Table
         $validator
             ->dateTime('DATEPOSTED')
             ->allowEmpty('DATEPOSTED');
+
+        $validator
+            ->allowEmpty('PICTUREDIR');
 
         return $validator;
     }
