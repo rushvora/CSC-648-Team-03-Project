@@ -45,8 +45,7 @@
                 <?= $this->Form->button(__('Post Listing'), ['type' => 'submit','style' => 'width: 100%', 'class' => 'btn btn-default']) ?>
             </div>
         </div>	    
-        <?= $this->Form->end() ?>
-		<?= $this->Flash->render() ?>
+       
 </div>
 <script>
     function goBack() {
@@ -83,4 +82,5 @@
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap" async defer></script>
-
+	<?= $this->Form->end() ?>
+	<?= $this->Flash->render() ?>

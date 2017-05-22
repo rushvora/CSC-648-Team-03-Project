@@ -57,6 +57,7 @@ class ListingsController extends AppController
 		if ($this->request->is('post')) 
 		{
 			$listing = $this->Listings->patchEntity($listing, $this->request->getData());	
+			$listing->SHORTDESCRIPTION = preg_replace('/(.*?[?!.](?=\s|$)).*/', '\\1', $listing->DESCRIPTION);
 			if ($this->Listings->save($listing))
 			{
 				$this->Flash->success(__('Your listing has been added.'));
