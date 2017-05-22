@@ -109,6 +109,12 @@ class ListingsController extends AppController
             {
                 $queryResults = $this->Listings->find()->where(['Title LIKE' => "%$query%", 'Category' => $category])->orWhere(['Description LIKE' => "%$query%", 'Category' => $category]); //Search either title or description
             }
+
+            $queryResults = $queryResults->toArray();
+            if (count($queryResults) == 0) {
+                $this->Flash->error('No Results found. Please try refining your search.');
+                $queryResults = $this->Listings->find();
+            }
         
             $results = array();
             foreach ($queryResults as $result){
