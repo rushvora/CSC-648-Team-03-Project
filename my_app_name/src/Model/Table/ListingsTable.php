@@ -33,6 +33,10 @@ class ListingsTable extends Table
         $this->setTable('listings');
         $this->setDisplayField('LISTINGSID');
         $this->setPrimaryKey('LISTINGSID');
+	
+		$this->belongsTo('users')
+			 ->setForeignKey('SELLER')
+			 ->bindingKey('USERNAME');
     }
 
     /**

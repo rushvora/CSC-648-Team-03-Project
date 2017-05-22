@@ -64,7 +64,30 @@ class ListingsController extends AppController
 		}
 		$this->set('listing', $listing);
 	}
+	/**
+	 * Action for showing listings by a user
+	 *
+	 * @param userid The user whose listings we want to show in the dashboard
+	 *
+	 * @post Set an array for results. Each result should be an array containing information required to show listings.
+	 */
+	public function myListings($uid=null)
+	{
+		$uid = $this->Auth->user('USERID');
+		$userName = $this->Users->find()->select(['Username'])->where(['Userid LIKE' => "$uid"]);
+		$listingsResults = $this->Listings->find()->where(['Seller LIKE' => "$userName"]);
 
+		$listingsResults = $listingsResults->toArray();
+		$displayResults = array();
+		foreach($listingsResults as $listingResult)
+		{
+			$displayResults[] = ['listingName' => $listingResult->TITLE, 'listingShortDescription' => $listingResult->SHORTDESCRIPTION, 'listingImage' => $listingResult->THUMBNAILS, 'listingPrice' => $listingResult->PRICE, 'listingCategory' => $listingResult->CATEGORY, 'listingDate' => $listingResult->DATEPOSTED];
+		}
+		$this->set('displayResults', $displayResults);
+		$this->render();
+	}	
+		 
+	
     /**
      * Action for searching for a listing.
      *

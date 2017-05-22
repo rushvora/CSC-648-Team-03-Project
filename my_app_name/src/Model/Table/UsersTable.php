@@ -34,6 +34,7 @@ class UsersTable extends Table
         $this->setDisplayField('USERID');
         $this->setPrimaryKey('USERID');
 		$this->hasMany('messages');
+		$this->hasMany('listings');
     }
 
     /**
