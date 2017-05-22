@@ -38,7 +38,9 @@ class MessagesController extends AppController
         $uid = $this->Auth->user('USERID');
         pr($uid);               
         $message= $this->Messages->findAllBySenderid($uid);
-        $this->set('messages', $message);
+        $receiver = $this->Messages->Users->find('all');
+	$this->set('messages', $message);
+        $this->set('receivers', $receiver);
     }
 
     /**
@@ -49,14 +51,11 @@ class MessagesController extends AppController
      */
     public function view($id = null)
     {
-        $message = $this->Messages->get($id, [
-            'contain' => []
-        ]);
+        $message = $this->Messages->get($id);
+	$message->READSTATUS = 1;
 	
-//	$this->Message->saveField('readStatus', 1);	
-	
+	$this->Messages->save($message);	//sets the readstatus to 1 to show that the message has been read	
         $this->set('message', $message);
-        $this->set('_serialize', ['message']);
     }
 
     /**
