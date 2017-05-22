@@ -10,7 +10,7 @@
         </tr>
     
     <?php foreach ($messages as $message): ?>
-            <td><?= $message->RECIPIENTID  ?></td>
+	    <td><?= $recipient[$message->RECIPIENTID]  ?></td>
             <td><?= $message->SUBJECT  ?></td> 
             <td><?= $message->BODY  ?></td> 
 	    <td><?= $message->DATESENT  ?></td>

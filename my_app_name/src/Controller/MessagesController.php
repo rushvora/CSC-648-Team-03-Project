@@ -22,10 +22,18 @@ class MessagesController extends AppController
     */
     public function index($uid = null)
     {
+        $users = TableRegistry::get('Users');
+        $query = $users->find();
+        $recipients = [];
+        foreach ($query as $user) {
+           $recipients[$user->USERID] = $user->USERNAME;
+        }
+
         $uid = $this->Auth->user('USERID');
-	pr($uid);		
 	$message= $this->Messages->findAllByRecipientid($uid);
 	$this->set('messages', $message);
+        $this->set('recipient', $recipients);
+
     }
 
     /**
@@ -35,12 +43,17 @@ class MessagesController extends AppController
      */
     public function outbox($uid = null)
     {
+	$users = TableRegistry::get('Users');
+	$query = $users->find();
+	$recipients = [];
+	foreach ($query as $user) {
+	   $recipients[$user->USERID] = $user->USERNAME;
+	}
+
         $uid = $this->Auth->user('USERID');
-        pr($uid);               
         $message= $this->Messages->findAllBySenderid($uid);
-        $receiver = $this->Messages->Users->find('all');
 	$this->set('messages', $message);
-        $this->set('receivers', $receiver);
+        $this->set('recipient', $recipients);
     }
 
     /**
@@ -51,11 +64,23 @@ class MessagesController extends AppController
      */
     public function view($id = null)
     {
+        $users = TableRegistry::get('Users');
+        $query = $users->find();
+        $recipients = [];
+        foreach ($query as $user) {
+           $recipients[$user->USERID] = $user->USERNAME;
+        }
+
+        
+	$uid = $this->Auth->user('USERID');
         $message = $this->Messages->get($id);
-	$message->READSTATUS = 1;
+	if ($uid == $message->RECIPIENTID){	//If statement to not change readStatus if the person that is viewing the message is the sender
+	    $message->READSTATUS = 1;
+        }
 	
 	$this->Messages->save($message);	//sets the readstatus to 1 to show that the message has been read	
         $this->set('message', $message);
+        $this->set('recipient', $recipients);
     }
 
     /**
@@ -65,10 +90,10 @@ class MessagesController extends AppController
      */
     public function add()
     {  	
+
 	$uid = $this->Auth->user('USERID');
 
         $users=$this->Messages->Users->findAllByUserid($uid);
-	//pr($users);
 	$this->set('users', $users);
 	$message = $this->Messages->newEntity();
 	$message->SENDERID = $uid;
