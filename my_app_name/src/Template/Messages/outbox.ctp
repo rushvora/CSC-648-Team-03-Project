@@ -88,19 +88,19 @@ div.panel {
 
 <h1>My Dashboard</h1>
 <div class="tab">
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']) ?>>Messages</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']) ?> >My Listings</button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']) ?>>Messages</a></button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']) ?> >My Listings</a></button>
 </div>
 
 
 <div class="tab2">
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']) ?>>Inbox</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'outbox']) ?> >Outbox</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'add']) ?> >Compose</button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']) ?>>Inbox</a></button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'outbox']) ?> >Outbox</a></button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'add']) ?> >Compose</a></button>
 </div>
 
 <h3>Outbox</h3>
-<table class="table table-hover"i>
+<table class="table">
         <tr>
             <th>Sent To</th>
             <th>Subject</th>
