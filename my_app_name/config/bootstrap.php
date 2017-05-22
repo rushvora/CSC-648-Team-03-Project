@@ -224,3 +224,5 @@ if (Configure::read('debug')) {
 Plugin::load('Proffer');
 
 Plugin::load('Proffer');
+
+Plugin::load('Proffer');

@@ -95,9 +95,9 @@ div.panel {
 
 
 <div class="tab2">
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']); ?>>Inbox</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'outbox']); ?> >Outbox</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'add']); ?> >Compose</button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']); ?>>Inbox</a></button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'outbox']); ?> >Outbox</a></button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'add']); ?> >Compose</a></button>
 </div>
 
 <h3>Inbox</h3>
