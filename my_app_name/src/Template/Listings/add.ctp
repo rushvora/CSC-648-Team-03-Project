@@ -42,17 +42,21 @@
                 <button class="btn btn-default" style="width: 100%;" onclick="goBack()">Cancel</button>
             </div>
             <div class="col-md-3 col-md-offset-6">
-                <?= $this->Form->button(__('Post Listing'), ['type' => 'button','style' => 'width: 100%', 'class' => 'btn btn-default']) ?>
+                <?= $this->Form->button(__('Post Listing'), ['type' => 'submit','style' => 'width: 100%', 'class' => 'btn btn-default']) ?>
             </div>
-        </div>	
-        <?= $this->Flash->render() ?>
+        </div>	    
         <?= $this->Form->end() ?>
+		<?= $this->Flash->render() ?>
 </div>
 <script>
     function goBack() {
-        if (confirm("Are you sure you want to leave this page?\n\nAll data you have entered will be lost.") == true) {
+        if (confirm("Are you sure you want to leave this page?\n\nAll data you have entered will be lost.") == true) 		{
             window.history.back();
         }
+		else
+		{
+			window.focus();
+		}
     }
 </script>
 <script>
@@ -79,3 +83,4 @@
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap" async defer></script>
+
