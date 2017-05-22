@@ -11,7 +11,7 @@
             <th>Date and Time Sent</th>
         </tr>
 
-            <td><?= $message->RECIPIENTID ?></td>
+            <td><?= $recipient[$message->RECIPIENTID]  ?></td>  
             <td><?= $message->SUBJECT  ?></td>
             <td><?= $message->BODY  ?></td>
             <td><?= $message->DATESENT  ?></td>
