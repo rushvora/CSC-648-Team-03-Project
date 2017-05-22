@@ -44,22 +44,50 @@ if (count($results) == 0)
             <p><?= $result['listingShortDescription'] ?></p>
 	  </div>
 </a>
-         <div class="wrapper">
-           <button  style = "" onclick="myFunction()">Contact Seller</button>
-           <p id="demo"></p>
-         </div>
+
+ <!-- Trigger/Open The Modal -->
+<button id="myBtn"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"style="width:10%; font-size: 100%">Contact Seller</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" style="padding:100px; width:45%; left:25%">
+
+  <!--Modal content -->
+      <div class="modal-content">
+      
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+     
+        <div class="modal-body row">
+          <div class="col-lg-12">
+          
+            <div style= "float:left">
+              <h3>To: Username</h3>
+  	      <h3>Subject: listingName</h3>
+            </div>
+            
+            <div style= "float:right">
+  			  <form action="#">
+  			  <textarea name="message" rows="10" cols="40">Enter Message Here.</textarea>
+              </form>  
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default">Submit</button>
+        </div>
+        
+      </div>
+
+<!--End of The Modal-->
+</div>
         
 
 </div>
 <div style="padding: 10px;"></div>
 <?php endforeach; ?>
 <script>
-		function myFunction() {
-             var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
-             if (person != null) {
-                 document.getElementById("demo").innerHTML =
-                    "Your Message: " + person;
-            }
-		}
-</script>
-

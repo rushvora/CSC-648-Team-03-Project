@@ -31,49 +31,11 @@ cursor:pointer;
   <div class="modal-content">
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h4 class="modal-title">Modal Header</h4>
-    </div>
-    
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <div class="modal-body row">
-		<!-- Indicators -->
-        <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
+      <h4 class="modal-title"><b> <?= $listingName ?></b>: $<?= $listingPrice ?> </h4>
+    </div>     
             <div class="item active">
-              <img src="<?=$listingImage?>" alt="Los Angeles">
-            </div>
-
-            <div class="item">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Chicago">
-            </div>
-    
-            <div class="item">
-              <img src="https://www.w3schools.com/images/picture.jpg" alt="New york">
-            </div>
-              
-            <div class="item">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Chicago">
+              <img src="<?=$listingImage?>" style= "width: 70%; height: 70%">
             </div> 
-          </div> <!--close carousel-inner-->
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div> <!-- close modal-body row-->
-</div> <!-- myCarousel-->
         
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -83,32 +45,13 @@ cursor:pointer;
 <!--End of The Modal-->
 </div>
 
-		<!--Pictures under bigger picture-->
-      <div class="row" style="padding:5px">  
-        <a href="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=left;padding: 2px">
-        </a>
-
-        <a href="">
-        <img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain" style="width: 90px;height:90px;float=center;padding: 2px">
-        </a>
-
-        <a href="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=right;padding: 2px">
-        </a>
-      </div>
-        <h5>All pictures were provided by google and w3schools.com </h5>
-		<!--                              -->
-
-
-
-		<p>Please click button to contact seller</p>
+<br></br>
 
  <!-- Trigger/Open The Modal -->
 <button id="myBtn"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"style="width:75%; font-size: 150%">Contact Seller</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal" style="padding:100px; width:45%; left:25%">
+<div id="myModal" class="modal" style="padding:100px; width:50%; left:25%">
 
   <!--Modal content -->
       <div class="modal-content">
