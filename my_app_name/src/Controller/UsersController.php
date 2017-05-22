@@ -56,8 +56,9 @@ class UsersController extends AppController {
 	    } 
 	    else {
 	        if ($this->Users->save($user)) {
-                    $this->Flash->success(__('The user has been saved.'));
-                    return $this->redirect(['action' => 'register']);
+                    $this->Flash->success(__('Congrats! Your account has been created.'));
+                    $this->Auth->setUser($user);
+                    return $this->redirect(['controller' => 'Pages', 'action' => 'display', 'home']);
                 }
                 $this->Flash->error(__('Unable to add the user.'));
             }
