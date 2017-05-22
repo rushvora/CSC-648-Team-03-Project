@@ -31,8 +31,8 @@ class ListingsTable extends Table
         parent::initialize($config);
 
         $this->setTable('listings');
-        $this->setDisplayField('ListingsId');
-        $this->setPrimaryKey('ListingsId');
+        $this->setDisplayField('LISTINGSID');
+        $this->setPrimaryKey('LISTINGSID');
     }
 
     /**

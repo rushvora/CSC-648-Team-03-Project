@@ -32,6 +32,6 @@ class Listing extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'ListingsId' => false
+        'LISTINGSID' => false
     ];
 }

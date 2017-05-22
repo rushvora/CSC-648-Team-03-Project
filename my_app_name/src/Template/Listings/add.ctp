@@ -5,11 +5,14 @@
             <div class="col-md-12">
                 <div class="form-group">
 -->
+					<?= $this->Flash->render() ?>
 					<?= $this->Form->create() ?>
-					<?= $this->Form->input('TITLE') ?>
-					<?= $this->Form->input('PRICE') ?>
-					<?= $this->Form->input('CATEGORY') ?>
-					<?= $this->Form->input('DESCRIPTION') ?>
+					
+						<?= $this->Form->control('TITLE') ?>
+						<?= $this->Form->control('PRICE') ?>
+						<?= $this->Form->control('CATEGORY') ?>
+						<?= $this->Form->control('DESCRIPTION') ?>
+
 					<?= $this->Form->button(__('Post Listing')) ?>
 					<?= $this->Form->end() ?>
 <!--				</div>
