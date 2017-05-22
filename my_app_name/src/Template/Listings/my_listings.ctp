@@ -44,8 +44,8 @@ div.panel {
 
 <h1>My Dashboard</h1>
 <div class="tab">
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']); ?>>Messages</button>
-  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']); ?> >My Listings</button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Messages', 'action' => 'index']) ?>>Messages</button>
+  <button class="tablinks"><a href=<?= $this->Url->build(['controller' => 'Listings', 'action' => 'myListings']) ?>>My Listings</button>
 </div>
 <?php
 if (count($displayResults) == 0)
