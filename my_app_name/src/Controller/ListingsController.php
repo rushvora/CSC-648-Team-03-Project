@@ -144,7 +144,7 @@ class ListingsController extends AppController
         
             $results = array();
             foreach ($queryResults as $result){
-              $results[] = ['listingName' => $result->TITLE, 'listingShortDescription' => $result->SHORTDESCRIPTION, 'listingImage' => $result->THUMBNAILS, 'listingPrice' => $result->PRICE, 'listingID' => $result->LISTINGSID];
+              $results[] = ['listingName' => $result->TITLE, 'listingShortDescription' => $result->SHORTDESCRIPTION, 'listingImage' => $result->PICTURE, 'listingPrice' => $result->PRICE, 'listingID' => $result->LISTINGSID];
             }
         }
         $this->set('results',$results);
