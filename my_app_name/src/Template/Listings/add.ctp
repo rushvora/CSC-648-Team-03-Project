@@ -1,26 +1,18 @@
 <h1 style="text-align: center; margin-top: 0%;">New Listing</h1>
-<!--<form action= $this->Url->build(['controller' => 'pages', 'action' => 'display', 'home']); >
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
--->
-					<?= $this->Flash->render() ?>
-					<?= $this->Form->create() ?>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<?= $this->Form->create() ?>
 					
-						<?= $this->Form->control('TITLE') ?>
-						<?= $this->Form->control('PRICE') ?>
-						<?= $this->Form->control('CATEGORY') ?>
-						<?= $this->Form->control('DESCRIPTION') ?>
-
-					<?= $this->Form->button(__('Post Listing')) ?>
-					<?= $this->Form->end() ?>
-<!--				</div>
-			</div>
-		</div>
-	</div>
-</form>-->
-<!--                    <label for="title">Name</label>
+				<?= $this->Form->text('TITLE', ['placeholder' => 'Name']) ?>
+				<?= $this->Form->select('CATEGORY', ['Books' => 'Books','Clothes' => 'Clothes','Electronics' => 'Electronics','Furniture' => 'Furniture','School Supplies' => 'School Supplies','Miscellaneous' => 'Miscellaneous'], ['empty' => 'Choose one'])  ?>
+				<?= $this->Form->number('PRICE',[ 'min' => '0.01','step' => '0.01','placeholder' => 'Price']) ?>
+				<?= $this->Form->textarea('DESCRIPTION', ['rows' => '10em','maxlength' => '1000', 'placeholder' => 'The first sentence will be used as a shorter description for your listing.']) ?>
+				<?= $this->Form->button(__('Post Listing')) ?>
+				<?= $this->Flash->render() ?>
+				<?= $this->Form->end() ?>
+              <label for="title">Name</label>
                     <input type="text" class="form-control" id="title" placeholder="Name" >
                 </div>
                 <div class="form-group">
@@ -96,4 +88,3 @@
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap" async defer></script>
--->

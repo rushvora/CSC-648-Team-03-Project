@@ -50,7 +50,6 @@ class ListingsController extends AppController
     public function add()
 	{
 		$listing = $this->Listings->newEntity();
-
 		
 		if ($this->request->is('post')) 
 		{
