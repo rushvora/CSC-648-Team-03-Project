@@ -1,122 +1,83 @@
 <DOCTYPE html>
 
 <style>
-.modal.and.carousel {
-  position: absolute; // Needed because the carousel overrides the position property
+#map {
+       height: 350px;
+        width: 100%;
+        border-radius: 20px;
+}
+img:hover{
+cursor:pointer;
 }
 
-      #map {
-        height: 350px;
-        width: 100%;
-       }
 </style>
-
+<div style="padding-top: 1.25%;">
 <!--div is for left side of website, contains pictures of listins and contact seller-->
-<div style="float: left; width: 300px;">
+<div style="float: left; width: 25%; border-radius:5px; border: 1px solid #ccc; padding: 10px;text-align: center; overflow:hidden">
         
-<div class="container" style="padding:0px">
+ <!-- Trigger/Open The Modal -->
+<?php echo $this->Html->image('../files/listings/PICTURE/' . $listingDir . '/square_' .  $listingImage); ?>
+<!-- The Modal -->
+<div id="picModal" class="modal" style="width:auto;max-width:500px; height:100%; left:30%; padding: 10%; overflow:hidden;">
 
-<a href="#lightbox" data-toggle="modal"><img id="myImg" src="<?= $listingImage ?>" alt="<?= $listingName ?>" style="width:280px; padding: 5px;">
-</a> 
-  
-  <div class="modal fade and carousel slide" id="lightbox">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><?=$listingName?></h4>
-        </div>
-
-        <div class="modal-body">
-          <div class="carousel-inner">
+  <!--Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title"><b> <?= $listingName ?></b>: $<?= $listingPrice ?> </h4>
+    </div>     
             <div class="item active">
-          <ol class="carousel-indicators">
-            <li data-target="#lightbox" data-slide-to="0" class="active"></li>
-            <li data-target="#lightbox" data-slide-to="1"></li>
-            <li data-target="#lightbox" data-slide-to="2"></li>
-          </ol>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="First slide">
-            </div>
-            <div class="item">
-              <img src="https://www.w3schools.com/images/picture.jpg" alt="Second slide">
-            </div>
-            <div class="item">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Third slide">
-              <div class="carousel-caption"><p></p></div>
-            </div>
-          </div><!-- /.carousel-inner -->
-          <a class="left carousel-control" href="#lightbox" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#lightbox" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div><!-- /.modal-body -->
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+				<?php echo $this->Html->image('../files/listings/PICTURE/' . $listingDir . '/square_' .  $listingImage); ?>              
+            </div> 
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+  </div> <!-- modal content-->
+  
+<!--End of The Modal-->
+ </div>
 
-</div><!-- /.container -->
+<br></br>
 
-		<!--Pictures under bigger picture-->
-        <a href="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=left;padding: 2px">
-        </a>
-
-        <a href="">
-        <img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain" style="width: 90px;height:90px;float=center;padding: 2px">
-        </a>
-
-        <a href="">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Madison_Square_Park_from_Above_at_Night_New_York_City.jpg" alt="Mountain" style="width: 90px;height:90px;float=right;padding: 2px">
-        </a>
-
-        <h5>All pictures were provided by google and w3schools.com </h5>
-		<!--                              -->
-
-
-
-		<p>Please click button to contact seller</p>
-
-		<button onclick="myFunction()">Contact Seller</button>
-
-		<p id="demo"></p>
-
-		<script>
-		function myFunction() {
-    	var person = prompt("Hello I'm Interested In Your Listing", "Enter Message Here");
-    	if (person != null) {
-      	  document.getElementById("demo").innerHTML =
-       	 "Your Message: " + person;
-   		 }
-		}
-		</script>
+     <!-- butto to contact seller -->
+     <button type="button" class= "btn btn-default" style="overflow:hidden"> <a href= <?= $this->Url->build(['controller' => 'Messages', 'action' => 'add']); ?>>Contact Seller</a></button>
 </div>
 <!-- End of left side div-->
-
 <!-- Listing Name, Listing Price, Listing Description, and soon to be google api-->
-         <article style="margin-left: 170px; border-left: 1px solid gray; padding: 1em; overflow: hidden;">
+<div style=" padding-left: 15px; overflow:hidden; width: 75%px">
+    <div style= "border: 1px solid #ccc; border-radius: 5px; padding:5px">	
 	<h1><u><?= $listingName ?></u></h1>
-         <h3> Price: $<?= $listingPrice ?></h3>
-         <p><?=$listingDescription?></p>
+        <h5>Sold by: <?= $sellerName ?></h5>
+        <h5>Date Posted: <?= $listingDate ?></h5>
+        <h3> Price: $<?= $listingPrice ?></h3>
+    </div>
+    <br></br>
 
-	<h3>Pickup Location</h3>
- <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: 37.7219, lng: -122.4782};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
-    </script>
-	</article>
+    <div style="border: 1px solid #ccc; border-radius: 5px; padding: 5px">
+     <h3><u>Description</u></h3>
+     <p><?=$listingDescription?></p>
+     <h3>Pickup Location</h3>
+     <div id="map"></div>
+         <script>
+     	     function initMap() {
+             var uluru = {lat: 37.7219, lng: -122.4782};
+             var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 15,
+             center: uluru
+           });
+              var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+         </script>
+
+         <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHJ8uGvSac6uZ1-4rrNHU6lqD1r1Ntn1E&callback=initMap">
+         </script>
+     </div>
+</div>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+

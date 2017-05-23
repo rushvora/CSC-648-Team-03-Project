@@ -30,9 +30,29 @@ class ListingsTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('listings');
-        $this->displayField('ListingsId');
-        $this->primaryKey('ListingsId');
+        $this->setTable('listings');
+        $this->setDisplayField('LISTINGSID');
+        $this->setPrimaryKey('LISTINGSID');
+	
+		$this->belongsTo('users')
+			 ->setForeignKey('SELLER')
+			 ->bindingKey('USERNAME');
+		/**
+		 * addBehaviour method for the Image Upload Plugin "Proffer"
+		 *
+		 */
+		$this->addBehavior('Proffer.Proffer', 
+									['PICTURE' => 
+										['root' => WWW_ROOT . 'files',
+										'dir' => 'PICTUREDIR',
+										'thumbnailSizes' => 
+											['square' => ['w' => 200, 'h' => 200, 'jpeg_quality' => 100],
+										 	 'portrait' => ['w' => 100, 'h' => 300],
+											],
+										'thumbnailMethod' => 'gd'
+										]
+									]
+							);	
     }
 
     /**
@@ -44,28 +64,41 @@ class ListingsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->integer('ListingsId')
-            ->allowEmpty('ListingsId', 'create');
+            ->integer('LISTINGSID')
+            ->allowEmpty('LISTINGSID', 'create');
 
         $validator
-            ->requirePresence('Name', 'create')
-            ->notEmpty('Name');
+            ->requirePresence('TITLE', 'create')
+            ->notEmpty('TITLE');
 
         $validator
-            ->decimal('Price')
-            ->allowEmpty('Price');
+            ->decimal('PRICE')
+            ->allowEmpty('PRICE');
 
         $validator
-            ->allowEmpty('Seller');
+            ->allowEmpty('SELLER');
 
         $validator
-            ->allowEmpty('Image');
+            ->allowEmpty('PICTURE');
 
         $validator
-            ->allowEmpty('Category');
+            ->allowEmpty('CATEGORY');
 
         $validator
-            ->allowEmpty('Pick Up Location');
+            ->allowEmpty('PICKUPLOCATION');
+
+        $validator
+            ->allowEmpty('DESCRIPTION');
+
+        $validator
+            ->allowEmpty('SHORTDESCRIPTION');
+
+        $validator
+            ->dateTime('DATEPOSTED')
+            ->allowEmpty('DATEPOSTED');
+
+        $validator
+            ->allowEmpty('PICTUREDIR');
 
         return $validator;
     }

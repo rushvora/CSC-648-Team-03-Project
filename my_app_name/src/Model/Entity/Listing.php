@@ -6,13 +6,17 @@ use Cake\ORM\Entity;
 /**
  * Listing Entity
  *
- * @property int $ListingsId
- * @property string $Name
- * @property float $Price
- * @property string $Seller
- * @property string|resource $Image
- * @property string $Category
- * @property string $Pick Up Location
+ * @property int $LISTINGSID
+ * @property string $TITLE
+ * @property float $PRICE
+ * @property string $SELLER
+ * @property string $PICTURE
+ * @property string $CATEGORY
+ * @property string $PICKUPLOCATION
+ * @property string $DESCRIPTION
+ * @property string $SHORTDESCRIPTION
+ * @property \Cake\I18n\Time $DATEPOSTED
+ * @property string $PICTUREDIR
  */
 class Listing extends Entity
 {
@@ -28,6 +32,6 @@ class Listing extends Entity
      */
     protected $_accessible = [
         '*' => true,
-        'ListingsId' => false
+        'LISTINGSID' => false
     ];
 }

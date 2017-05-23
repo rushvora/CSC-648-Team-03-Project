@@ -9,7 +9,7 @@
     <p>Computer Science major at SFSU from Santa Cruz California</p>
     <br>
     <br>
-    <img src="http://i.imgur.com/k5CIqu2.jpg" style="width: 3264px;height: 2448px;">
+    <img src="http://imgur.com/GCcKudv.png" style="width: 540px;height: 720px;">
     <br>
     <br>
     <p><a href="/~sp17g03/">Home</a></p>
