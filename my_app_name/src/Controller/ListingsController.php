@@ -77,18 +77,18 @@ class ListingsController extends AppController
 	 *
 	 * @post Set an array for results. Each result should be an array containing information required to show listings.
 	 */
-	public function myListings($uid=null)
+	public function myListings($uid1=null)
 	{
-		$uid = $this->Auth->user('USERID');
+		$uid1 = $this->Auth->user('USERID');
 		$this->loadModel('Users');
-		$userName = $this->Users->find()->select(['USERNAME'])->where(['USERID LIKE' => "$uid"]);
-		$listingsResults = $this->Listings->find()->where(['SELLER LIKE' => "$userName"]);
+		$userName1 = $this->Users->find()->select(['USERNAME'])->where(['USERID LIKE' => "$uid1"]);
+		$listingsResults = $this->Listings->find()->where(['SELLER LIKE' => "$userName1"]);
 
 		$listingsResults = $listingsResults->toArray();
 		$displayResults = array();
 		foreach($listingsResults as $listingResult)
 		{
-			$displayResults[] = ['listingID' => $listingResult->LISTINGSID, 'listingName' => $listingResult->TITLE, 'listingShortDescription' => $listingResult->SHORTDESCRIPTION, 'listingImage' => $listingResult->PICTURE, 'listingPrice' => $listingResult->PRICE, 'listingCategory' => $listingResult->CATEGORY, 'listingDate' => $listingResult->DATEPOSTED];
+			$displayResults[] = ['listingID' => $listingResult->LISTINGSID, 'listingName' => $listingResult->TITLE, 'listingShortDescription' => $listingResult->SHORTDESCRIPTION, 'listingImage' => $listingResult->PICTURE, 'listingPrice' => $listingResult->PRICE, 'listingCategory' => $listingResult->CATEGORY, 'listingDate' => $listingResult->DATEPOSTED, 'listingDir' => $listingResult->PICTUREDIR];
 		}
 		$this->set('displayResults', $displayResults);
 		$this->render();
