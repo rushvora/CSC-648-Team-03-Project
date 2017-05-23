@@ -50,8 +50,7 @@ class MessagesTable extends Table
 
         $validator
             ->integer('SENDERID')
-            ->requirePresence('SENDERID', 'create')
-            ->notEmpty('SENDERID');
+            ->allowEmpty('SENDERID');
 
         $validator
             ->integer('RECIPIENTID')
